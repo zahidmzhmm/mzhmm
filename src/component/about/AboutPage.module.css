@@ -1,0 +1,28 @@
+.title_main {
+    text-align: center;
+    margin-top: 5rem
+}
+.main_title_section {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 0.13rem solid #ddd;
+    padding-bottom: 0.7rem
+}
+.main_title_section:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -4.3%;
+    margin: auto;
+    left: 40%
+}
+
+.main_title_section:hover:before {
+    width: 100%;
+    left: 0
+}
