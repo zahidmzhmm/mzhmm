@@ -28,13 +28,13 @@ const About = () => {
                             I am Zahid. I have 3+ years of experience in Web Development. Customer service: 20/7. You will get 100% full support of work assured until you are fully satisfied. My key skills are: 1. HTML5, CSS3, JavaScript & Jquery, Bootstrap,Wordpress Elementor, PHP, MySql 2. Any sketch, PSD, ai, photo, xd to HTML, Bootstrap, Wordpress with Elementor 3. demo import and customize with client requirement, page build with Elementor, SEO with Yoast plugin, login, registration 4. Graphic Design: A. Logo Design C. Favicon Design D. Adobe Illustrator E. Adobe Photoshop 5. Admin Panel, Controler Others.
                         </div>
                         <div>
-                            <div className={classes.share_icon}><Link to="facebook"><Facebook /></Link></div>
-                            <div className={classes.share_icon}><Link to="tweitter"><Twitter /></Link></div>
-                            <div className={classes.share_icon}><Link to="linkedin"><LinkedIn /></Link></div>
-                            <div className={classes.share_icon}><Link to="youtube"><YouTube /></Link></div>
+                            <div className={classes.share_icon}><Link target="_blank" to="facebook"><Facebook /></Link></div>
+                            <div className={classes.share_icon}><Link target="_blank" to="tweitter"><Twitter /></Link></div>
+                            <div className={classes.share_icon}><Link target="_blank" to="linkedin"><LinkedIn /></Link></div>
+                            <div className={classes.share_icon}><Link target="_blank" to="youtube"><YouTube /></Link></div>
                         </div>
                         <div className={classes.hire_section}>
-                            <div className={classes.hire_buttons}><Link to='/hire' front="HIRE ME" back="GO NOW" className={classes.hire_me} /></div>
+                            <div className={classes.hire_buttons}><a href="mailto:info@zahidmzhmm.com" front="HIRE ME" back="GO NOW" className={classes.hire_me} /></div>
                             <div className={classes.hire_buttons}><Link to='/hire' front="DOWNLOAD C.V" back="GO TO RESUME" className={classes.download_cv} /></div>
                         </div>
                     </div>

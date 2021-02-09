@@ -34,7 +34,7 @@ const Home = () => {
                             </span>
                         </div>
                     </h2>
-                    <div className={classes.scroll_bottom}><Link to="/about_me"><ArrowDownward /></Link></div>
+                    <div className={classes.scroll_bottom}><Link to="/about"><ArrowDownward /></Link></div>
                 </div>
             </div>
             <About />
