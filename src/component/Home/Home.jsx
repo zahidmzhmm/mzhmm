@@ -1,5 +1,5 @@
 import React from 'react';
-import {Facebook, Twitter, LinkedIn, YouTube, ArrowDownward, Code, FaceSharp, Layers, Star, Sync} from '@material-ui/icons';
+import {Facebook, Twitter, LinkedIn, YouTube, ArrowDownward, Code, Mood, Layers, Star, Sync, ThumbUpAlt} from '@material-ui/icons';
 import {AssetsDir} from "../../server/Config";
 import classes from './Home.module.css';
 import {Link} from 'react-router-dom';
@@ -25,6 +25,20 @@ const skillImage = {
 }
 const clientImage = {
     background: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0,0.8)),url('${AssetsDir}coding_tow.jpg')`,
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+}
+const reviewImage = {
+    background: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0,0.8)),url('${AssetsDir}coding_tree.jpg')`,
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+}
+const getIntoTouchImage = {
+    background: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0,0.8)),url('${AssetsDir}coding_four.jpg')`,
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -161,7 +175,7 @@ const Home = () => {
                 <div className="container">
                     <div className="row text-center">
                         <div className={`${classes.clientColumn}col-md-6 col-lg-3 col-xs-12`}>
-                            <div className={classes.clientIcon}><span><FaceSharp /></span></div>
+                            <div className={classes.clientIcon}><span><Mood /></span></div>
                             <div className={`${classes.clientNumber} counter`}>12</div>
                             <p className={classes.clientText}>Customers</p>
                         </div>
@@ -179,6 +193,197 @@ const Home = () => {
                             <div className={classes.clientIcon}><span><Sync /></span></div>
                             <div className={`${classes.clientNumber} counter`}>15</div>
                             <p className={classes.clientText}>Running Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={classes.portfolio}>
+                <div className="container pb-5 mb-5">
+                    <h2 className={`${classes.title_main} text-center pt-3`}><span className={classes.main_title_section}>My Portfolio </span>
+                    </h2>
+                    <div className="row pt-5">
+                        <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+                            <div>
+                                <Link
+                                className={classes.portfolioColumnA}
+                                title="<?php echo $portfolio['name']; ?>"
+                                description="<?php echo $portfolio['description']; ?>"
+                                data-title="<?php echo $portfolio['name']; ?>"
+                                data-idno="<?php echo $portfolio['id']; ?>"
+                                data-image="<?php echo $portfolio['file']; ?>"
+                                data-description="<?php echo $portfolio['description']; ?>"
+                                data-table="portfolio"
+                                data-toggle="modal" to="/">
+                                <img src={`${AssetsDir}/portfolio/53903.png`} />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+                            <div>
+                                <Link
+                                className={classes.portfolioColumnA}
+                                title="<?php echo $portfolio['name']; ?>"
+                                description="<?php echo $portfolio['description']; ?>"
+                                data-title="<?php echo $portfolio['name']; ?>"
+                                data-idno="<?php echo $portfolio['id']; ?>"
+                                data-image="<?php echo $portfolio['file']; ?>"
+                                data-description="<?php echo $portfolio['description']; ?>"
+                                data-table="portfolio"
+                                data-toggle="modal" to="/">
+                                <img src={`${AssetsDir}/portfolio/53903.png`} />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+                            <div>
+                                <Link
+                                className={classes.portfolioColumnA}
+                                title="<?php echo $portfolio['name']; ?>"
+                                description="<?php echo $portfolio['description']; ?>"
+                                data-title="<?php echo $portfolio['name']; ?>"
+                                data-idno="<?php echo $portfolio['id']; ?>"
+                                data-image="<?php echo $portfolio['file']; ?>"
+                                data-description="<?php echo $portfolio['description']; ?>"
+                                data-table="portfolio"
+                                data-toggle="modal" to="/">
+                                <img src={`${AssetsDir}/portfolio/53903.png`} />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+                            <div>
+                                <Link
+                                className={classes.portfolioColumnA}
+                                title="<?php echo $portfolio['name']; ?>"
+                                description="<?php echo $portfolio['description']; ?>"
+                                data-title="<?php echo $portfolio['name']; ?>"
+                                data-idno="<?php echo $portfolio['id']; ?>"
+                                data-image="<?php echo $portfolio['file']; ?>"
+                                data-description="<?php echo $portfolio['description']; ?>"
+                                data-table="portfolio"
+                                data-toggle="modal" to="/">
+                                <img src={`${AssetsDir}/portfolio/53903.png`} />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+                            <div>
+                                <Link
+                                className={classes.portfolioColumnA}
+                                title="<?php echo $portfolio['name']; ?>"
+                                description="<?php echo $portfolio['description']; ?>"
+                                data-title="<?php echo $portfolio['name']; ?>"
+                                data-idno="<?php echo $portfolio['id']; ?>"
+                                data-image="<?php echo $portfolio['file']; ?>"
+                                data-description="<?php echo $portfolio['description']; ?>"
+                                data-table="portfolio"
+                                data-toggle="modal" to="/">
+                                <img src={`${AssetsDir}/portfolio/53903.png`} />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+                            <div>
+                                <Link
+                                className={classes.portfolioColumnA}
+                                title="<?php echo $portfolio['name']; ?>"
+                                description="<?php echo $portfolio['description']; ?>"
+                                data-title="<?php echo $portfolio['name']; ?>"
+                                data-idno="<?php echo $portfolio['id']; ?>"
+                                data-image="<?php echo $portfolio['file']; ?>"
+                                data-description="<?php echo $portfolio['description']; ?>"
+                                data-table="portfolio"
+                                data-toggle="modal" to="/">
+                                <img src={`${AssetsDir}/portfolio/53903.png`} />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+                            <div>
+                                <Link
+                                className={classes.portfolioColumnA}
+                                title="<?php echo $portfolio['name']; ?>"
+                                description="<?php echo $portfolio['description']; ?>"
+                                data-title="<?php echo $portfolio['name']; ?>"
+                                data-idno="<?php echo $portfolio['id']; ?>"
+                                data-image="<?php echo $portfolio['file']; ?>"
+                                data-description="<?php echo $portfolio['description']; ?>"
+                                data-table="portfolio"
+                                data-toggle="modal" to="/">
+                                <img src={`${AssetsDir}/portfolio/53903.png`} />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className={classes.portfolioButtons}>
+                            <Link to="portfolio" className={classes.portfolioButton}>View More</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={classes.review} style={reviewImage}>
+                <div className="container">
+                    <div className={classes.reviewIcon}><span className={classes.reviewIcons}><ThumbUpAlt /></span></div>
+                    <h2 className={`${classes.review_title} text-center`}>
+                        <span className={classes.review_title_section}> Testimonials </span>
+                    </h2>
+                    <div className={classes.review_carousel_one}>
+                        <div>
+                            <div className={classes.client_image}><img src={`${AssetsDir}/4539.jpg`} alt="" />
+                            </div>
+                            <div className={classes.review_comment}><p className={classes.review_text}>Every time is a real pleasure to work with Zahid! :) i totally recommend him!</p></div>
+                            <div className={classes.review_name}><span> Goldensio </span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style={{paddingTop:'1px'}} />
+            <div className={classes.getIntoTouch} style={getIntoTouchImage}>
+                <h2 className={`${classes.get_into_title} text-center`}><span className={classes.get_into_title_section}>  Get In Touch </span></h2>
+                <form className="mt-5">
+                    <div className="container">
+                        <div className="row px-3">
+                            <div className="col-lg-6 m-auto">Title</div>
+                        </div>
+                        <div className={`${classes.getIntoForm_section} row my-4 mx-0`}>
+                            <div className="col-md-6 pt-2">
+                                <input type="text" name="name" required className="form_ne" placeholder="Name *" />
+                            </div>
+                            <div className="col-md-6 pt-2">
+                                <input type="email" name="email" required className="form_ne" placeholder="Email *" />
+                            </div>
+                        </div>
+                        <div className={`${classes.getIntoForm_section} row my-4 mx-0`}>
+                            <div className="col-12">
+                                <input type="text" name="subject" required className="" placeholder="Subject *" />
+                            </div>
+                        </div>
+                        <div className={`${classes.getIntoForm_section} row my-4 mx-0`}>
+                            <div className="col-12">
+                                <textarea name="massage" id="" required className={classes.getIntoMassage} cols="30" placeholder="Massage *" rows="8" />
+                            </div>
+                        </div>
+                        <div className="row buttons mx-0">
+                            <div className="col-12">
+                                <button type="submit" name="contact" className={classes.getIntoButton}>Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div className={`${classes.getIntoUser} container`}>
+                    <div className="row">
+                        <div className={`${classes.getInto_column} col-md-6 col-lg-4 col-xs-12`}>
+                            <h4>Phone</h4>
+                            <p>8801741424639</p>
+                        </div>
+                        <div className={`${classes.getInto_column} col-md-6 col-lg-4 col-xs-12`}>
+                            <h4>Email</h4>
+                            <p>support@zahidmzhmm.com</p>
+                        </div>
+                        <div className={`${classes.getInto_column} col-md-6 col-lg-4 col-xs-12`}>
+                            <h4>Address</h4>
+                            <p>Assam Colony, Bou Bazar, Sopura, Rajshahi-6203, Bangladesh</p>
                         </div>
                     </div>
                 </div>
