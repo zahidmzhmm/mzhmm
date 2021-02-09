@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./getIntoTouch.module.css";
+import classes from "./GetIntoTouch.module.css";
 import {AssetsDir} from "../../server/Config";
 
 const getIntoTouchImage = {

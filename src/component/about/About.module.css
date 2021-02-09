@@ -3,6 +3,7 @@
     text-align: center;
     margin-top: 5rem
 }
+
 .main_title_section:before {
     transition: 300ms;
     position: absolute;
@@ -160,4 +161,22 @@
 .download_cv:hover:before {
     background: #C49B66;
     color: #fff
+}
+@media (max-width: 991px) {
+    .title_section {
+        margin-top: 2rem
+    }
+    .add_image {
+        height: 45rem
+    }
+}
+@media (max-width: 526px) {
+    .title_section {
+        margin-top: 2rem!important;
+    }
+    .title2 {
+        font-size: 2rem!important;
+        display: block;
+        line-height: 1;
+    }
 }

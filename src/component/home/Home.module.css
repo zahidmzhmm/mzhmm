@@ -112,11 +112,7 @@
     background: transparent;
     text-decoration: none
 }
-
-
-
-
-
+/* Responsive Section */
 @media (max-width: 991px) {
     .homePage .iam {
         margin-top: 0.6rem!important
@@ -127,9 +123,6 @@
     .bars {
         color: #fff;
         text-align: center
-    }
-    .title_section {
-        margin-top: 2rem
     }
     .add_image {
         height: 45rem
@@ -145,22 +138,11 @@
     .percent_bar {
         width: 15rem
     }
-    .title_section {
-        margin-top: 2rem!important;
-    }
-    .title2 {
-        font-size: 2rem!important;
-        display: block;
-        line-height: 1;
-    }
     .title {
         border-bottom: 0.1rem solid transparent
     }
     .title:before {
         content: " ";
         border-bottom: 0.1rem solid transparent
-    }
-    .add_image {
-        height: 20rem
     }
 }
