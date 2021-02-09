@@ -18,12 +18,11 @@ const Header = () => {
                         <Nav className="ml-auto">
                             <NavLink exact={true} activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/">Home</NavLink>
                             <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/services">Services</NavLink>
-                            <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/portfolio">Portfolio</NavLink>
-                            <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/review">Review</NavLink>
-                            <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/gallery">Gallery</NavLink>
+                            <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/portfolios">Portfolio</NavLink>
+                            <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/reviews">Review</NavLink>
                             <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/about">About</NavLink>
                             <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/contact">Contact</NavLink>
-                            <NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/fileShare">File Share</NavLink>
+                            {/*<NavLink activeStyle={active} className={`${classes.navLink} mx-xl-3`} to="/fileShare">File Share</NavLink>*/}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

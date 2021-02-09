@@ -3,6 +3,13 @@ import {ArrowDownward} from '@material-ui/icons';
 import {AssetsDir} from "../../server/Config";
 import classes from './Home.module.css';
 import {Link} from 'react-router-dom';
+import About from "../about/About";
+import Skills from "../skills/Skills";
+import Services from "../services/Services";
+import ClientSatisfy from "../clientSatisfy/ClientSatisfy";
+import Portfolio from "../portfolio/Portfolio";
+import Review from "../review/Review";
+import GetIntoTouch from "../getIntoTouch/GetIntoTouch";
 
 const homeIMG = {
     backgroundImage: `url('${AssetsDir}162tree-736885__340.jpg')`,
@@ -30,6 +37,14 @@ const Home = () => {
                     <div className={classes.scroll_bottom}><Link to="/about_me"><ArrowDownward /></Link></div>
                 </div>
             </div>
+            <About />
+            <Skills />
+            <Services />
+            <ClientSatisfy />
+            <Portfolio />
+            <Review />
+            <div style={{paddingTop: '1px'}} />
+            <GetIntoTouch />
         </>
     );
 };
