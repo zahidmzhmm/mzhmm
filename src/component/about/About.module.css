@@ -1,0 +1,163 @@
+/* About Section */
+.title_main {
+    text-align: center;
+    margin-top: 5rem
+}
+.main_title_section:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -4.3%;
+    margin: auto;
+    left: 40%
+}
+
+.main_title_section:hover:before {
+    width: 100%;
+    left: 0
+}
+.about_me {
+    padding: 6rem 0;
+    height: 100%;
+    width: 100%
+}
+
+.about_image {
+    position: relative;
+    transition: 500ms
+}
+
+.about_image:after {
+    content: "";
+    height: 95%;
+    border-bottom: 1rem solid #ddd;
+    border-right: 1rem solid #ddd;
+    position: absolute;
+    bottom: -3.3%;
+    width: 100%;
+    transition: 1000ms;
+    left: 3.3%
+}
+.about_image:hover {
+    transform: translateX(-1rem)
+}
+
+.about_image:hover:after {
+    transition: 500ms;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid transparent
+}
+
+.about_image:hover:before {
+    content: "";
+    height: 95%;
+    border-left: 1rem solid #C49B66;
+    border-top: 1rem solid #C49B66;
+    position: absolute;
+    top: -3.3%;
+    width: 100%;
+    transition: 1000ms;
+    left: -3.3%
+}
+
+.add_image {
+    height: 30rem
+}
+
+.title2 {
+    color: #333;
+    padding-bottom: 1.3rem;
+    font-size: 2.3rem;
+    border-radius: 0.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    border-bottom: 0.13rem solid #eee
+}
+
+.title2:before {
+    font-family: "Josefin Sans", sans-serif;
+    content: "I Am";
+    font-weight: 600;
+    border-bottom: 0.13rem solid #C49B66;
+    padding-bottom: 1.3rem
+}
+
+.long_des {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: #a3a3a3
+}
+
+.share_icon {
+    padding-top: 3rem;
+    width: 2.5rem;
+    display: inline-block;
+    text-align: center;
+    margin: 0 .3rem;
+}
+
+.share_icon a {
+    color: #333;
+    font-size: 1rem;
+    box-shadow: 0 0 0.3rem 0.1rem rgba(164, 182, 206, 0.14);
+    padding: 0.5rem;
+    border: 1px solid #eee;
+}
+
+.share_icon a:hover {
+    transition: 300ms;
+    background: #C49B66;
+    color: #fff;
+    box-shadow: 0 0 0.3rem 0.1rem transparent;
+    text-decoration: none
+}
+
+.hire_section {
+    margin-top: 3rem
+}
+
+.hire_buttons {
+    display: inline-block
+}
+
+.download_cv,.hire_me {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    color: #fff
+}
+
+.download_cv:before,.hire_me:before {
+    background: #C49B66;
+    padding: 0.5rem 1rem;
+    content: attr(front);
+    overflow: hidden;
+    border: 0.1rem solid #C49B66;
+    box-shadow: 0 0 0.5rem 0.1rem rgba(168, 168, 168, 0.5);
+    transition: 300ms
+}
+
+.download_cv:hover,.hire_me:hover {
+    text-decoration: none
+}
+
+.download_cv:hover:before,.hire_me:hover:before {
+    content: attr(back);
+    box-shadow: 0 0 0.5rem 0.1rem transparent;
+    background: #fff;
+    color: #333
+}
+
+.download_cv:before {
+    background: #fff;
+    color: #333
+}
+
+.download_cv:hover:before {
+    background: #C49B66;
+    color: #fff
+}

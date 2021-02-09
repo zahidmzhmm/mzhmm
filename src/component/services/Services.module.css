@@ -1,0 +1,114 @@
+/* Services Section */
+.title_main {
+    text-align: center;
+    margin-top: 5rem
+}
+.services {
+    background: #fff;
+    padding: 2rem 0
+}
+
+.buttons {
+    margin: auto
+}
+
+.buttons a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    background: #C49B66;
+    border: 0.1rem solid #C49B66;
+    transition: 300ms;
+    border-radius: 0.3rem
+}
+
+.buttons a:hover {
+    color: #333;
+    text-decoration: none;
+    background: transparent
+}
+.servicesColumn {
+    margin-top: 1rem;
+    padding: 1rem
+}
+
+.servicesColumn img {
+    width: 100%;
+    height: 100%
+}
+
+.title_main {
+    text-align: center;
+    margin-top: 5rem
+}
+
+.main_title_section {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 0.13rem solid #ddd;
+    padding-bottom: 0.7rem
+}
+.main_title_section:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -4.3%;
+    margin: auto;
+    left: 40%
+}
+
+.main_title_section:hover:before {
+    width: 100%;
+    left: 0
+}
+.servicesColumnSection {
+    border: 0.13rem solid transparent;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem 0.3rem rgba(164, 182, 206, 0.14);
+    transition: 300ms;
+    border-radius: 0.3rem
+}
+
+.servicesColumnSection:hover {
+    box-shadow: 0 0 0.3rem 0.3rem transparent;
+    border: 0.13rem solid #ddd
+}
+
+.servicesColumnSection:hover h3 span:before {
+    width: 50%;
+    left: 25%
+}
+
+.servicesColumnSectionIcon {
+    width: 5rem;
+    margin: 1rem auto
+}
+
+.servicesColumnSection p {
+    padding-top: 1rem;
+    color: #a3a3a3
+}
+
+.servicesColumnSection h3 {
+    margin-bottom: 1.5rem
+}
+
+.servicesColumnSection h3 span {
+    position: relative;
+    padding-bottom: 1rem
+}
+
+.servicesColumnSection h3 span:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -7%;
+    left: 40%
+}

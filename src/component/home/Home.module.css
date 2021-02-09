@@ -1,0 +1,166 @@
+.title_main {
+    text-align: center;
+    margin-top: 5rem
+}
+
+.main_title_section {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 0.13rem solid #ddd;
+    padding-bottom: 0.7rem
+}
+
+.main_title_section:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -4.3%;
+    margin: auto;
+    left: 40%
+}
+
+.main_title_section:hover:before {
+    width: 100%;
+    left: 0
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: transparent
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f2f2f2
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ddd
+}
+
+::-moz-viewport-scroll {
+    width: 5px
+}
+
+.home {
+    position: relative
+}
+
+.homeImage {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background: #000
+}
+
+.imageAdd {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5
+}
+
+.homePage {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #fff
+}
+
+.title {
+    font-weight: 300;
+    padding-top: 14.5rem;
+    font-size: 2.5rem;
+    padding-bottom: 1rem
+}
+
+.btm_title {
+    font-weight: 300;
+    font-size: 4.3rem
+}
+
+.btm_title span {
+    font-weight: 700
+}
+
+.scroll_bottom {
+    text-align: center
+}
+
+.scroll_bottom a {
+    background: #333;
+    border-radius: 2rem;
+    padding: 0.2rem .5rem .3rem 0.5rem;
+    transition: 300ms;
+    color: #fff;
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1rem
+}
+.scroll_bottom a svg {
+    font-size: 1rem;
+}
+
+.scroll_bottom a:hover {
+    background: transparent;
+    text-decoration: none
+}
+
+
+
+
+
+@media (max-width: 991px) {
+    .homePage .iam {
+        margin-top: 0.6rem!important
+    }
+    .homePage h2 {
+        font-size: 3rem!important
+    }
+    .bars {
+        color: #fff;
+        text-align: center
+    }
+    .title_section {
+        margin-top: 2rem
+    }
+    .add_image {
+        height: 45rem
+    }
+}
+@media (max-width: 526px) {
+    .homePage .iam {
+        margin-top: 0.4rem!important
+    }
+    .homePage h2 {
+        font-size: 2rem!important
+    }
+    .percent_bar {
+        width: 15rem
+    }
+    .title_section {
+        margin-top: 2rem!important;
+    }
+    .title2 {
+        font-size: 2rem!important;
+        display: block;
+        line-height: 1;
+    }
+    .title {
+        border-bottom: 0.1rem solid transparent
+    }
+    .title:before {
+        content: " ";
+        border-bottom: 0.1rem solid transparent
+    }
+    .add_image {
+        height: 20rem
+    }
+}

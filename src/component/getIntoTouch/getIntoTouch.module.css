@@ -1,0 +1,80 @@
+/* GetInto Touch */
+.getIntoTouch {
+    padding: 5rem 0
+}
+
+.get_into_title {
+    text-align: center;
+    margin-top: 0;
+    color: #fff
+}
+
+.get_into_title_section {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 0.13rem solid rgba(80, 80, 80, 0.3);
+    padding-bottom: 0.7rem
+}
+
+.get_into_title_section:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -4.3%;
+    margin: auto;
+    left: 40%
+}
+
+.get_into_title_section:hover:before {
+    width: 100%;
+    left: 0
+}
+
+.getIntoMassage,.getIntoForm_section input {
+    width: 100%;
+    background: rgba(10, 10, 10, 0.4);
+    border: 0.1rem solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 0.6rem 0.5rem
+}
+
+.getIntoButton {
+    background: #C49B66;
+    border: 0.1rem solid #C49B66;
+    color: #fff;
+    padding: 0.5rem 3rem;
+    transition: 300ms;
+    border-radius: 0.2rem;
+    overflow: hidden
+}
+
+.getIntoButton:hover {
+    background: transparent;
+    color: #C49B66
+}
+
+.getIntoUser {
+    color: #fff;
+    padding-left: 3rem;
+    margin-top: 2rem
+}
+
+.getInto_column {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-left: 0.1rem solid #eee
+}
+
+.getInto_column h4 {
+    font-size: 1rem
+}
+
+.getInto_column p {
+    color: #a3a3a3;
+    font-size: 0.9rem
+}

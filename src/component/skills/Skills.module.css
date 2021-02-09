@@ -1,0 +1,107 @@
+/* Skills Section */
+.title_main {
+    text-align: center;
+    margin-top: 5rem
+}
+.main_title_section:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -4.3%;
+    margin: auto;
+    left: 40%
+}
+
+.main_title_section:hover:before {
+    width: 100%;
+    left: 0
+}
+.skills_section {
+    padding: 3rem 0;
+}
+.skills_icons {
+    font-size: 2rem;
+    text-align: center;
+    color: #C49B66;
+    font-family: "Josefin Sans", sans-serif
+}
+.skill_title {
+    text-align: center
+}
+.skill_title_tag {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+    border-bottom: 0.13rem solid #eee;
+    padding-bottom: 0.5rem
+}
+.skill_title_tag:before {
+    background: #C49B66;
+    content: " ";
+    width: 50%;
+    position: absolute;
+    height: 0.15rem;
+    bottom: -0.13rem;
+    transition: 300ms
+}
+.skill_title_tag:hover:before {
+    width: 100%
+}
+.skill_skills {
+    margin-top: 3rem
+}
+.skill {
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 2rem
+}
+.percent_section {
+    margin-top: 0.3rem
+}
+.percent_bar {
+    width: 30rem;
+    height: 0.5rem;
+    padding: 0.2rem;
+    background: rgba(80, 80, 80, 0.3);
+    display: inline-block;
+    border-radius: 2rem;
+    position: relative
+}
+.percent_bar:after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    background: #C49B66;
+    bottom: 0;
+    left: 0;
+    border-radius: 2rem
+}
+.percent {
+    display: inline-block
+}
+.percent5:after {
+    width: 5%
+}
+.percent10:after {
+    width: 10%
+}
+.percent15:after {
+    width: 15%
+}
+.percent50:after {
+    width: 50%
+}
+
+
+
+
