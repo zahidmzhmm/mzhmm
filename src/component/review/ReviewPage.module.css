@@ -26,3 +26,109 @@
     width: 100%;
     left: 0
 }
+
+
+.blog img {
+    width: 100%;
+    height: 13rem
+}
+
+.column {
+    color: #333;
+    font-size: .8rem;
+}
+
+.column:hover {
+    text-decoration: none
+}
+
+.client_comment {
+    height: 4.3rem;
+    overflow-y: auto;
+    font-size: .8rem;
+}
+
+.main_column {
+    box-shadow: 0 0 1rem -0.3rem rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    transition: 300ms
+}
+
+.main_column:hover {
+    box-shadow: 0 0 1rem 0.3rem transparent;
+    border: 1px solid #eee
+}
+
+.description {
+    padding: 1rem 1rem 0 1rem
+}
+
+.description h2 a {
+    font-size: 1.3rem;
+    color: #333
+}
+
+.description h2 a:hover {
+    text-decoration: none
+}
+
+.description p {
+    height: 5rem;
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: #a3a3a3
+}
+
+.creator {
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #a3a3a3
+}
+
+.creator a {
+    color: #a3a3a3
+}
+
+.creator a:hover {
+    text-decoration: none
+}
+
+.image a {
+    display: block;
+    position: relative;
+    height: 15rem
+}
+.icon svg
+{
+    font-size: 1rem;
+}
+.icon
+{
+    font-size: 1rem;
+    margin-top: 0;
+}
+.image a:before {
+    content: attr(tag);
+    position: absolute;
+    bottom: -1rem;
+    background: #C49B66;
+    padding: 0.5rem 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    color: #fff
+}
+
+.blog_details img {
+    width: 100%;
+    height: 100%
+}
+
+.image_section {
+    margin-top: 2rem
+}
+
+.title {
+    padding: 2rem 0
+}
