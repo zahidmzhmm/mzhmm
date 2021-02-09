@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <div className={'fixed-top'}>
             <Navbar className={classes.navbar} bg="light" expand="lg">
-                <Container>
+                <Container className="px-lg-3">
                     <Navbar.Brand><Link to="/"><img className={classes.logo} src={`${AssetsDir}/546logo.png`} alt=""/></Link></Navbar.Brand>
                     <Navbar.Toggle className={`${classes.navbarToggler} ${classes.bars}`} aria-controls="navbar_main" />
                     <Navbar.Collapse id="navbar_main">

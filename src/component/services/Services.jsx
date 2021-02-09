@@ -38,11 +38,6 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className={classes.buttons}>
-                        <Link to="/services" className="button">View More</Link>
-                    </div>
-                </div>
             </div>
         </div>
     );

@@ -27,8 +27,8 @@ const Home = () => {
                 <div className={classes.homePage}>
                     <h4 className={classes.title}>Web Developer</h4>
                     <h2 className={classes.btm_title}>
-                        <div className="cd-headline clip is-full-width">
-                            <span className="iam mt-3">I Am</span>
+                        <div className="cd-headline clip pt-5 is-full-width">
+                            <span className="iam">I Am</span>
                             <span className="cd-words-wrapper">
                                 <b className="is-visible"> <span>a Web Developer</span></b>
                             </span>
@@ -40,9 +40,19 @@ const Home = () => {
             <About />
             <Skills />
             <Services />
+            <div className="row pb-5 mx-0">
+                <div className={classes.buttons}>
+                    <Link to="/services" className="button">View More</Link>
+                </div>
+            </div>
+            <Review />
             <ClientSatisfy />
             <Portfolio />
-            <Review />
+            <div className="row pb-5 mx-0">
+                <div className={classes.buttons}>
+                    <Link to="/portfolios" className="button">View More</Link>
+                </div>
+            </div>
             <div style={{paddingTop: '1px'}} />
             <GetIntoTouch />
         </>

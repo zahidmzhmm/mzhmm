@@ -112,6 +112,25 @@
     background: transparent;
     text-decoration: none
 }
+
+.buttons {
+    margin: auto
+}
+
+.buttons a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    background: #C49B66;
+    border: 0.1rem solid #C49B66;
+    transition: 300ms;
+    border-radius: 0.3rem
+}
+
+.buttons a:hover {
+    color: #333;
+    text-decoration: none;
+    background: transparent
+}
 /* Responsive Section */
 @media (max-width: 991px) {
     .homePage .iam {
@@ -134,9 +153,6 @@
     }
     .homePage h2 {
         font-size: 2rem!important
-    }
-    .percent_bar {
-        width: 15rem
     }
     .title {
         border-bottom: 0.1rem solid transparent

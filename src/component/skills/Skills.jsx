@@ -8,7 +8,6 @@ const skillImage = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
 }
 const Skills = () => {
     return (

@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <div className={`${classes.footer} text-light`}>
                 <div className="container py-3 text-center">
-                    <div className={classes.copyright}> &copy; Copyright Zahid Mzhmm 2020</div>
+                    <div className={classes.copyright}> &copy; Copyright Zahid Mzhmm 2021</div>
                 </div>
             </div>
         </>

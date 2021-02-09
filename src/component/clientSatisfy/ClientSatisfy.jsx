@@ -8,7 +8,6 @@ const clientImage = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
 }
 const ClientSatisfy = () => {
     return (

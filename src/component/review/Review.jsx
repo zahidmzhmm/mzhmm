@@ -8,7 +8,6 @@ const reviewImage = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
 }
 const Review = () => {
     return (
