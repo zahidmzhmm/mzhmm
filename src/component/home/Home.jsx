@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 import About from "../about/About";
 import Skills from "../skills/Skills";
 import Services from "../services/Services";
-import ClientSatisfy from "../clientSatisfy/ClientSatisfy";
 import Portfolio from "../portfolio/Portfolio";
 import Review from "../review/Review";
 import GetIntoTouch from "../getIntoTouch/GetIntoTouch";
@@ -46,7 +45,6 @@ const Home = () => {
                 </div>
             </div>
             <Review />
-            <ClientSatisfy />
             <Portfolio />
             <div className="row pb-5 mx-0">
                 <div className={classes.buttons}>
