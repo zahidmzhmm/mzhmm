@@ -25,7 +25,7 @@ const Home = () => {
                     <div className={classes.imageAdd} style={homeIMG} />
                 </div>
                 <div className={classes.homePage}>
-                    <h4 className={classes.title}>Web Developer</h4>
+                    <h4 className={classes.title}>Zahid Mzhmm</h4>
                     <h2 className={classes.btm_title}>
                         <div className="cd-headline clip pt-5 is-full-width">
                             <span className="iam">I Am</span>

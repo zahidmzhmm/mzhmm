@@ -101,7 +101,7 @@
     transition: 300ms;
     color: #fff;
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     font-size: 1rem
 }
 .scroll_bottom a svg {
@@ -111,25 +111,6 @@
 .scroll_bottom a:hover {
     background: transparent;
     text-decoration: none
-}
-
-.buttons {
-    margin: auto
-}
-
-.buttons a {
-    color: #fff;
-    padding: 0.5rem 1rem;
-    background: #C49B66;
-    border: 0.1rem solid #C49B66;
-    transition: 300ms;
-    border-radius: 0.3rem
-}
-
-.buttons a:hover {
-    color: #333;
-    text-decoration: none;
-    background: transparent
 }
 /* Responsive Section */
 @media (max-width: 991px) {
@@ -153,6 +134,9 @@
     }
     .homePage h2 {
         font-size: 2rem!important
+    }
+    .percent_bar {
+        width: 15rem
     }
     .title {
         border-bottom: 0.1rem solid transparent

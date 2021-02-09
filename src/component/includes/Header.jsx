@@ -9,7 +9,7 @@ const active = {
 }
 const Header = () => {
     return (
-        <div className={'fixed-top'}>
+        <div className={''}>
             <Navbar className={classes.navbar} bg="light" expand="lg">
                 <Container className="px-lg-3">
                     <Navbar.Brand><Link to="/"><img className={classes.logo} src={`${AssetsDir}/546logo.png`} alt=""/></Link></Navbar.Brand>
