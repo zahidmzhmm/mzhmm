@@ -1,0 +1,498 @@
+.title_main {
+    text-align: center;
+    margin-top: 5rem
+}
+
+.main_title_section {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 0.13rem solid #ddd;
+    padding-bottom: 0.7rem
+}
+
+.main_title_section:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -4.3%;
+    margin: auto;
+    left: 40%
+}
+
+.main_title_section:hover:before {
+    width: 100%;
+    left: 0
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: transparent
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f2f2f2
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ddd
+}
+
+::-moz-viewport-scroll {
+    width: 5px
+}
+
+.home {
+    position: relative
+}
+
+.homeImage {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background: #000
+}
+
+.imageAdd {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5
+}
+
+.homePage {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #fff
+}
+
+.title {
+    font-weight: 300;
+    padding-top: 14.5rem;
+    font-size: 2.5rem;
+    padding-bottom: 1rem
+}
+
+.btm_title {
+    font-weight: 300;
+    font-size: 4.3rem
+}
+
+.btm_title span {
+    font-weight: 700
+}
+
+.scroll_bottom {
+    text-align: center
+}
+
+.scroll_bottom a {
+    background: #333;
+    border-radius: 2rem;
+    padding: 0.2rem .5rem .3rem 0.5rem;
+    transition: 300ms;
+    color: #fff;
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1rem
+}
+.scroll_bottom a svg {
+    font-size: 1rem;
+}
+
+.scroll_bottom a:hover {
+    background: transparent;
+    text-decoration: none
+}
+
+/* About Section */
+.about_me {
+    padding: 6rem 0;
+    height: 100%;
+    width: 100%
+}
+
+.about_image {
+    position: relative;
+    transition: 500ms
+}
+
+.about_image:after {
+    content: "";
+    height: 95%;
+    border-bottom: 1rem solid #ddd;
+    border-right: 1rem solid #ddd;
+    position: absolute;
+    bottom: -3.3%;
+    width: 100%;
+    transition: 1000ms;
+    left: 3.3%
+}
+.about_image:hover {
+    transform: translateX(-1rem)
+}
+
+.about_image:hover:after {
+    transition: 500ms;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid transparent
+}
+
+.about_image:hover:before {
+    content: "";
+    height: 95%;
+    border-left: 1rem solid #C49B66;
+    border-top: 1rem solid #C49B66;
+    position: absolute;
+    top: -3.3%;
+    width: 100%;
+    transition: 1000ms;
+    left: -3.3%
+}
+
+.add_image {
+    height: 30rem
+}
+
+.title2 {
+    color: #333;
+    padding-bottom: 1.3rem;
+    font-size: 2.3rem;
+    border-radius: 0.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    border-bottom: 0.13rem solid #eee
+}
+
+.title2:before {
+    font-family: "Josefin Sans", sans-serif;
+    content: "I Am";
+    font-weight: 600;
+    border-bottom: 0.13rem solid #C49B66;
+    padding-bottom: 1.3rem
+}
+
+.long_des {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: #a3a3a3
+}
+
+.share_icon {
+    padding-top: 3rem;
+    width: 2.5rem;
+    display: inline-block;
+    text-align: center;
+    margin: 0 .3rem;
+}
+
+.share_icon a {
+    color: #333;
+    font-size: 1rem;
+    box-shadow: 0 0 0.3rem 0.1rem rgba(164, 182, 206, 0.14);
+    padding: 0.5rem;
+    border: 1px solid #eee;
+}
+
+.share_icon a:hover {
+    transition: 300ms;
+    background: #C49B66;
+    color: #fff;
+    box-shadow: 0 0 0.3rem 0.1rem transparent;
+    text-decoration: none
+}
+
+.hire_section {
+    margin-top: 3rem
+}
+
+.hire_buttons {
+    display: inline-block
+}
+
+.download_cv,.hire_me {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    color: #fff
+}
+
+.download_cv:before,.hire_me:before {
+    background: #C49B66;
+    padding: 0.5rem 1rem;
+    content: attr(front);
+    overflow: hidden;
+    border: 0.1rem solid #C49B66;
+    box-shadow: 0 0 0.5rem 0.1rem rgba(168, 168, 168, 0.5);
+    transition: 300ms
+}
+
+.download_cv:hover,.hire_me:hover {
+    text-decoration: none
+}
+
+.download_cv:hover:before,.hire_me:hover:before {
+    content: attr(back);
+    box-shadow: 0 0 0.5rem 0.1rem transparent;
+    background: #fff;
+    color: #333
+}
+
+.download_cv:before {
+    background: #fff;
+    color: #333
+}
+
+.download_cv:hover:before {
+    background: #C49B66;
+    color: #fff
+}
+/* Skill Section */
+.skills_section {
+    padding: 3rem 0;
+}
+.skills_icons {
+    font-size: 2rem;
+    text-align: center;
+    color: #C49B66;
+    font-family: "Josefin Sans", sans-serif
+}
+.skill_title {
+    text-align: center
+}
+.skill_title_tag {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+    border-bottom: 0.13rem solid #eee;
+    padding-bottom: 0.5rem
+}
+.skill_title_tag:before {
+    background: #C49B66;
+    content: " ";
+    width: 50%;
+    position: absolute;
+    height: 0.15rem;
+    bottom: -0.13rem;
+    transition: 300ms
+}
+.skill_title_tag:hover:before {
+    width: 100%
+}
+.skill_skills {
+    margin-top: 3rem
+}
+.skill {
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 2rem
+}
+.percent_section {
+    margin-top: 0.3rem
+}
+.percent_bar {
+    width: 30rem;
+    height: 0.5rem;
+    padding: 0.2rem;
+    background: rgba(80, 80, 80, 0.3);
+    display: inline-block;
+    border-radius: 2rem;
+    position: relative
+}
+.percent_bar:after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    background: #C49B66;
+    bottom: 0;
+    left: 0;
+    border-radius: 2rem
+}
+.percent {
+    display: inline-block
+}
+.percent5:after {
+    width: 5%
+}
+.percent10:after {
+    width: 10%
+}
+.percent15:after {
+    width: 15%
+}
+.percent50:after {
+    width: 50%
+}
+/* Services Section */
+
+.services {
+    background: #fff;
+    padding: 2rem 0
+}
+
+.buttons {
+    margin: auto
+}
+
+.buttons a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    background: #C49B66;
+    border: 0.1rem solid #C49B66;
+    transition: 300ms;
+    border-radius: 0.3rem
+}
+
+.buttons a:hover {
+    color: #333;
+    text-decoration: none;
+    background: transparent
+}
+
+.servicesColumn {
+    margin-top: 1rem;
+    padding: 1rem
+}
+
+.servicesColumn img {
+    width: 100%;
+    height: 100%
+}
+
+.servicesColumnSection {
+    border: 0.13rem solid transparent;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem 0.3rem rgba(164, 182, 206, 0.14);
+    transition: 300ms;
+    border-radius: 0.3rem
+}
+
+.servicesColumnSection:hover {
+    box-shadow: 0 0 0.3rem 0.3rem transparent;
+    border: 0.13rem solid #ddd
+}
+
+.servicesColumnSection:hover h3 span:before {
+    width: 50%;
+    left: 25%
+}
+
+.servicesColumnSectionIcon {
+    width: 5rem;
+    margin: 1rem auto
+}
+
+.servicesColumnSection p {
+    padding-top: 1rem;
+    color: #a3a3a3
+}
+
+.servicesColumnSection h3 {
+    margin-bottom: 1.5rem
+}
+
+.servicesColumnSection h3 span {
+    position: relative;
+    padding-bottom: 1rem
+}
+
+.servicesColumnSection h3 span:before {
+    transition: 300ms;
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 0.13rem;
+    background: #C49B66;
+    bottom: -7%;
+    left: 40%
+}
+/* Client Section */
+.clientSatisfy {
+    padding: 2rem 0
+}
+
+.clientColumn span {
+    font-size: 2.5rem;
+    color: #C49B66
+}
+
+.clientNumber {
+    font-size: 3rem;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200
+}
+
+.clientText {
+    color: #bbb
+}
+.clientIcon svg{
+    font-size: 3rem;
+    text-align: center;
+    color: #C49B66;
+    font-family: "Josefin Sans", sans-serif
+}
+
+@media (max-width: 991px) {
+    .homePage .iam {
+        margin-top: 0.6rem!important
+    }
+    .homePage h2 {
+        font-size: 3rem!important
+    }
+    .bars {
+        color: #fff;
+        text-align: center
+    }
+    .title_section {
+        margin-top: 2rem
+    }
+    .add_image {
+        height: 45rem
+    }
+}
+@media (max-width: 526px) {
+    .homePage .iam {
+        margin-top: 0.4rem!important
+    }
+    .homePage h2 {
+        font-size: 2rem!important
+    }
+    .percent_bar {
+        width: 15rem
+    }
+    .title_section {
+        margin-top: 2rem!important;
+    }
+    .title2 {
+        font-size: 2rem!important;
+        display: block;
+        line-height: 1;
+    }
+    .title {
+        border-bottom: 0.1rem solid transparent
+    }
+    .title:before {
+        content: " ";
+        border-bottom: 0.1rem solid transparent
+    }
+    .add_image {
+        height: 20rem
+    }
+}

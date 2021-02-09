@@ -1,0 +1,84 @@
+#navBar
+{
+  box-shadow: 0px -5px 10px 0px transparent;
+  background: transparent;
+  z-index: 999;
+  .active
+  {
+    color: $main!important;
+  }
+  .navbar-toggler
+  {
+    padding: .6rem;
+  }
+  .navbar_container
+  {
+    .navbar
+    {
+      padding: .8rem 0;
+      .navbar-brand
+      {
+        img
+        {
+          display: flex;
+          width: 7rem;
+        }
+      }
+      .collapse
+      {
+        .navbar-nav
+        {
+          text-align: center;
+          &.registrationSection
+          {
+            .nav-item
+            {
+              padding-right: .6rem;
+              .nav-link
+              {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 500;
+                color: $white;
+                font-size: .8rem;
+                line-height: 1rem;
+                transition: 300ms;
+                &:hover
+                {
+                  color: $main;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.container_dark
+  {
+    box-shadow: 0px -5px 10px 0px $black;
+    background: $white;
+    transition: 300ms;
+    .nav-item
+    {
+      .nav-link
+      {
+        color: $gray!important;
+      }
+      .active
+      {
+        color: $main!important;
+      }
+    }
+    .bars
+     {
+       color: $gray!important;
+       text-align: center;
+     }
+    #navbarSupportedContent
+    {
+      transition: 1000ms;
+      background: $white;
+      color: $gray;
+    }
+  }
+}

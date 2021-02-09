@@ -1,0 +1,89 @@
+#getintotouch
+{
+  padding: 5rem 0;
+  .get_into_title
+  {
+    text-align: center;
+    margin-top: 0;
+    color: $white;
+    .get_into_title_section
+    {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 2.3rem;
+      font-weight: 500;
+      position: relative;
+      border-bottom: .13rem solid $progres;
+      padding-bottom: .7rem;
+      &::before
+      {
+        transition: 300ms;
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: .13rem;
+        background: $main;
+        bottom: -4.3%;
+        margin: auto;
+        left: 40%;
+      }
+      &:hover
+      {
+        &::before
+        {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+  .form_section
+  {
+    input,.massage
+    {
+      width: 100%;
+      background: $bg_form;
+      border: .1rem solid $form_border;
+      color: $white;
+      padding: .6rem .5rem;
+    }
+  }
+  .buttons
+  {
+    .button
+    {
+      background: $main;
+      border: .1rem solid $main;
+      color: $white;
+      padding: .5rem 3rem;
+      transition: 300ms;
+      border-radius: .2rem;
+      overflow: hidden;
+      &:hover
+      {
+        background: transparent;
+        color: $main;
+      }
+    }
+  }
+  .details_user
+  {
+    color: $white;
+    padding-left: 3rem;
+    margin-top: 2rem;
+    .column
+    {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-left: .1rem solid $white_gray;
+      h4
+      {
+        font-size: 1rem;
+      }
+      p
+      {
+        color: $about_description;
+        font-size: .9rem;
+      }
+    }
+  }
+}

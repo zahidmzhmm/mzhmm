@@ -1,0 +1,31 @@
+.owl-nav
+{
+  color: $white;
+  text-align: center;
+  .fa-arrow-left,.fa-arrow-right
+  {
+    background: $main;
+    box-shadow: 0 0 2rem -.3rem $box_shadow;
+    width: 2rem;
+    margin: 1rem;
+    padding: .5rem;
+    line-height: 1.5rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: .8rem;
+    display: block;
+    transition: 300ms;
+    border: .13rem solid transparent;
+    &:hover
+    {
+      border: .13rem solid $white_gray;
+      box-shadow: 0 0 2rem -.3rem transparent;
+      color: $white_gray;
+      background: transparent;
+    }
+  }
+}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled
+{
+  display: block!important;
+}

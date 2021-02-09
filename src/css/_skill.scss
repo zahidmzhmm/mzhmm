@@ -1,0 +1,105 @@
+#skill
+{
+  padding: 3rem 0;
+  .icons
+  {
+    font-size: 2rem;
+    text-align: center;
+    color: $main;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .title
+  {
+    text-align: center;
+  }
+  .title_tag
+  {
+    color: $white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+    border-bottom: .13rem solid $white_gray;
+    padding-bottom: .5rem;
+    &::before
+    {
+      background: $main;
+      content: " ";
+      width: 50%;
+      position: absolute;
+      height: .15rem;
+      bottom: -0.13rem;
+      transition: 300ms;
+    }
+    &:hover
+    {
+      &::before
+      {
+        width: 100%;
+      }
+    }
+  }
+  .skills
+  {
+    margin-top: 3rem;
+    .skill
+    {
+      font-family: "Josefin Sans", sans-serif;
+      color: $white;
+      max-width: 50rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-top: 2rem;
+      .percent_section
+      {
+        margin-top: .3rem;
+        .percent_bar
+        {
+          width: 30rem;
+          height: .5rem;
+          padding: .2rem;
+          background: $progres;
+          display: inline-block;
+          border-radius: 2rem;
+          position: relative;
+          &::after
+          {
+            content: "";
+            position: absolute;
+            height: .5rem;
+            background: $main;
+            bottom: 0;
+            left: 0;
+            border-radius: 2rem;
+          }
+        }
+        .five_percent { &::after { width: 5%; } }
+        .ten_percent { &::after { width: 10%; } }
+        .fifteen_percent { &::after { width: 15%; } }
+        .twenty_percent { &::after { width: 20%; } }
+        .twenty_five_percent { &::after { width: 25%; } }
+        .thirty_percent { &::after { width: 30%; } }
+        .thirty_five_percent { &::after { width: 35%; } }
+        .forty_percent { &::after { width: 40%; } }
+        .forty_five_percent { &::after { width: 45%; } }
+        .fifty_percent { &::after { width: 50%; } }
+        .fifty_five_percent { &::after { width: 55%; } }
+        .sixty_percent { &::after { width: 60%; } }
+        .sixty_five_percent { &::after { width: 65%; } }
+        .seventy_percent { &::after { width: 70%; } }
+        .seventy_five_percent { &::after { width: 75%; } }
+        .eighty_percent { &::after { width: 80%; } }
+        .eighty_five_percent { &::after { width: 85%; } }
+        .ninety_percent { &::after { width: 90%; } }
+        .ninety_five_percent { &::after { width: 95%; } }
+        .hundred_percent { &::after { width: 100%; } }
+        .percent
+        {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

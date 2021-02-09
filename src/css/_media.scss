@@ -1,0 +1,115 @@
+@media (max-width: 991px) {
+  #navbarSupportedContent
+  {
+    background: $gray;
+    color: $white;
+    .nav-item
+    {
+      padding-right: 0!important;
+      .nav-link
+      {
+        padding: 1rem 0;
+        margin: 0 0;
+        &:hover
+        {
+          background: $black;
+        }
+      }
+    }
+  }
+  .home-page
+  {
+    .iam
+    {
+      margin-top: .6rem!important;
+    }
+    h2
+    {
+      font-size: 3rem!important;
+    }
+  }
+  .bars
+  {
+    color: $white;
+    text-align: center;
+  }
+  .title_section
+  {
+    margin-top: 1rem;
+  }
+  #getintotouch
+  {
+    .details_user
+    {
+      .column
+      {
+        border-left: .1rem solid transparent;
+      }
+    }
+  }
+  #blog
+  {
+    .column
+    {
+      padding-left: 2rem;
+    }
+  }
+}
+@media (max-width: 526px) {
+  .home-page
+  {
+    .iam
+    {
+      margin-top: .4rem!important;
+    }
+    h2
+    {
+      font-size: 2rem!important;
+    }
+  }
+  #skill
+  {
+    .skills
+    {
+      .skill
+      {
+        .percent_section
+        {
+          .percent_bar
+          {
+            width: 15rem;
+          }
+        }
+      }
+    }
+  }
+  #about_me
+  {
+    .description
+    {
+      .title_section
+      {
+        border-bottom: .13rem solid $white_gray;
+        font-size: 2rem;
+        padding-bottom: 1.28rem;
+        &::before
+        {
+          font-family: "Josefin Sans", sans-serif;
+          content: "I Am";
+          font-size: 2.3rem;
+          padding-bottom: 5.3rem;
+          border-bottom: .13rem solid $main;
+        }
+        .title
+        {
+          border-bottom: .1rem solid transparent;
+          &::before
+          {
+            content: " ";
+            border-bottom: .1rem solid transparent;
+          }
+        }
+      }
+    }
+  }
+}

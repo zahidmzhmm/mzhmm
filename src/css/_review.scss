@@ -1,0 +1,78 @@
+#review
+{
+  padding: 5rem 0;
+  .icon
+  {
+    text-align: center;
+    .icons
+    {
+      color: $white;
+      font-size: 3rem;
+    }
+  }
+  .review_title
+  {
+    text-align: center;
+    margin-top: 0;
+    color: $white;
+    .review_title_section
+    {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 2.3rem;
+      font-weight: 500;
+      position: relative;
+      border-bottom: .13rem solid $progres;
+      padding-bottom: .7rem;
+      &::before
+      {
+        transition: 300ms;
+        position: absolute;
+        content: "";
+        width: 20%;
+        height: .13rem;
+        background: $main;
+        bottom: -4.3%;
+        margin: auto;
+        left: 40%;
+      }
+      &:hover
+      {
+        &::before
+        {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+  .comment
+  {
+    text-align: center;
+    color: $bbb;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  .name
+  {
+    font-weight: 500;
+    text-align: center;
+    color: $white;
+    font-size: .8rem;
+  }
+  .client_image
+  {
+    width: 8rem;
+    height: 8rem;
+    display: block;
+    cursor: pointer;
+    margin: 2rem auto 1rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    img
+    {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

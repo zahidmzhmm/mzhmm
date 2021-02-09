@@ -1,0 +1,148 @@
+#about_me
+{
+  padding: 6rem 0;
+  height: 100%;
+  width: 100%;
+  .about_image
+  {
+    position: relative;
+    transition: 500ms;
+    &::after {
+      content: "";
+      height: 95%;
+      border-bottom: 1rem solid $ddd;
+      border-right: 1rem solid $ddd;
+      position: absolute;
+      bottom: -3.3%;
+      width: 100%;
+      transition: 1000ms;
+      left: 3.3%;
+    }
+    &:hover
+    {
+      &::after {
+        transition: 500ms;
+        border-bottom: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+      }
+      &::before
+      {
+        content: "";
+        height: 95%;
+        border-left: 1rem solid $main;
+        border-top: 1rem solid $main;
+        position: absolute;
+        top: -3.3%;
+        width: 100%;
+        transition: 1000ms;
+        left: -3.3%;
+      }
+      transform: translateX(-1rem);
+    }
+    .add_image
+    {
+      height: 30rem;
+    }
+  }
+  .description
+  {
+    .title
+    {
+      color: $gray;
+      padding-bottom: 1.3rem;
+      font-size: 2.3rem;
+      border-radius: .2rem;
+      border-bottom: .13rem solid $white_gray;
+      &::before
+      {
+        font-family: "Josefin Sans", sans-serif;
+        content: "I Am";
+        border-bottom: .13rem solid $main;
+        padding-bottom: 1.3rem;
+      }
+    }
+    .long_des
+    {
+      margin-top: 3rem;
+      font-size: 1rem;
+      color: $about_description;
+    }
+  }
+  .share_section
+  {
+    .icon
+    {
+      padding-top: 3rem;
+      width: 2.5rem;
+      display: inline-block;
+      text-align: center;
+      a
+      {
+        color: $gray;
+        font-size: 1rem;
+        box-shadow: 0 0 .3rem 0.1rem $box_shadow;
+        padding: .5rem;
+        border: 1px solid $white_gray;
+        &:hover
+        {
+          transition: 300ms;
+          background: $main;
+          color: $white;
+          box-shadow: 0 0 .3rem .1rem transparent;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .hire_section
+  {
+    margin-top: 3rem;
+    .buttons
+    {
+      display: inline-block;
+      .hire_me,.download_cv
+      {
+        margin-right: 1rem;
+        font-size: .9rem;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        color: $white;
+        &::before{
+          background: $main;
+          padding: .5rem 1rem;
+          content: attr(front);
+          border: .1rem solid $main;
+          box-shadow: 0 0 .5rem 0.1rem $box_shadow_two;
+          transition: 300ms;
+        }
+        &:hover
+        {
+          text-decoration: none;
+          &::before
+          {
+            content: attr(back);
+            box-shadow: 0 0 .5rem 0.1rem transparent;
+            background: $white;
+            color: $gray;
+          }
+        }
+      }
+      .download_cv
+      {
+        &::before
+        {
+          background: $white;
+          color: $gray;
+        }
+        &:hover
+        {
+          &::before
+          {
+            background: $main;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
