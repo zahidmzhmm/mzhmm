@@ -16,7 +16,7 @@ const About = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-5">
-                        <div className="image_section">
+                        <div>
                             <div className={classes.about_image}>
                                 <div className={classes.add_image} style={addImage} />
                             </div>

@@ -179,4 +179,7 @@
         display: block;
         line-height: 1;
     }
+    .add_image {
+        height: 20rem
+    }
 }
