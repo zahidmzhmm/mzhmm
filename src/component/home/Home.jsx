@@ -1,5 +1,5 @@
 import React from 'react';
-import {ArrowDownward} from '@material-ui/icons';
+import {Info} from '@material-ui/icons';
 import {AssetsDir} from "../../server/Config";
 import classes from './Home.module.css';
 import {Link} from 'react-router-dom';
@@ -34,7 +34,7 @@ const Home = () => {
                             </span>
                         </div>
                     </h2>
-                    <div className={classes.scroll_bottom}><Link to="/about"><ArrowDownward /></Link></div>
+                    <div className={classes.scroll_bottom}><Link to="/about"><Info /></Link></div>
                 </div>
             </div>
             <About />

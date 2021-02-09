@@ -52,6 +52,24 @@
 .home {
     position: relative
 }
+.buttons {
+    margin: auto
+}
+
+.buttons a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    background: #C49B66;
+    border: 0.1rem solid #C49B66;
+    transition: 300ms;
+    border-radius: 0.3rem
+}
+
+.buttons a:hover {
+    color: #333;
+    text-decoration: none;
+    background: transparent
+}
 
 .homeImage {
     width: 100%;
