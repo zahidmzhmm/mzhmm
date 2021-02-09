@@ -12,7 +12,7 @@ const getIntoTouchImage = {
 const GetIntoTouch = () => {
     return (
         <div className={classes.getIntoTouch} style={getIntoTouchImage}>
-            <h2 className={`${classes.get_into_title} text-center`}><span className={classes.get_into_title_section}>  Get In Touch </span></h2>
+            <h2 className={`${classes.get_into_title} text-center mt-5`}><span className={classes.get_into_title_section}>  Get In Touch </span></h2>
             <form className="mt-5">
                 <div className="container">
                     <div className="row px-3">
