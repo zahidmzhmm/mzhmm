@@ -30,9 +30,7 @@ const Home = () => {
                     <div className={classes.scroll_bottom}><Link to="/about_me"><ArrowDownward /></Link></div>
                 </div>
             </div>
-
             <div style={{paddingTop:'1px'}} />
-
         </>
     );
 };
