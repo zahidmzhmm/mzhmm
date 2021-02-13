@@ -2,6 +2,8 @@ import React from 'react';
 import classes from "./Review.module.css";
 import {Layers, Mood, Star, Sync, ThumbUpAlt} from "@material-ui/icons";
 import {AssetsDir} from "../../server/Config";
+import ReviewCom from "./ReviewCom";
+import ReactElasticCarousel from "react-elastic-carousel";
 
 const reviewImage = {
     background: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0,0.8)),url('${AssetsDir}coding_tree.jpg')`,
@@ -17,14 +19,14 @@ const Review = () => {
                 <h2 className={`${classes.review_title} text-center pb-2`}>
                     <span className={classes.review_title_section}> Testimonials </span>
                 </h2>
-                <div>
-                    <div>
-                        <div className={classes.client_image}><img src={`${AssetsDir}/4539.jpg`} alt="" />
-                        </div>
-                        <div className={classes.review_comment}><p>Every time is a real pleasure to work with Zahid! :) i totally recommend him!</p></div>
-                        <div className={classes.review_name}><span> Goldensio </span></div>
-                    </div>
-                </div>
+            </div>
+            <div className="container">
+                <ReactElasticCarousel>
+                    <ReviewCom key="1" userImage="1905.jpg" userComment="Testing" userName="Username" />
+                    <ReviewCom key="2" userImage="1905.jpg" userComment="Testing" userName="Username" />
+                    <ReviewCom key="3" userImage="1905.jpg" userComment="Testing" userName="Username" />
+                    <ReviewCom key="4" userImage="1905.jpg" userComment="Testing" userName="Username" />
+                </ReactElasticCarousel>
             </div>
             <div className="container mt-5">
                 <div className="row text-center">
