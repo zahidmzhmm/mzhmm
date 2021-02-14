@@ -89,66 +89,6 @@
 .percent {
     display: inline-block
 }
-.percent5:after {
-    width: 5%
-}
-.percent10:after {
-    width: 10%
-}
-.percent15:after {
-    width: 15%
-}
-.percent20:after {
-    width: 15%
-}
-.percent25:after {
-    width: 15%
-}
-.percent30:after {
-    width: 15%
-}
-.percent35:after {
-    width: 15%
-}
-.percent40:after {
-    width: 15%
-}
-.percent45:after {
-    width: 15%
-}
-.percent50:after {
-    width: 50%
-}
-.percent55:after {
-    width: 50%
-}
-.percent60:after {
-    width: 50%
-}
-.percent65:after {
-    width: 50%
-}
-.percent70:after {
-    width: 50%
-}
-.percent75:after {
-    width: 50%
-}
-.percent80:after {
-    width: 50%
-}
-.percent85:after {
-    width: 50%
-}
-.percent90:after {
-    width: 50%
-}
-.percent95:after {
-    width: 50%
-}
-.percent100:after {
-    width: 50%
-}
 @media (max-width: 526px) {
     .percent_bar {
         width: 15rem
