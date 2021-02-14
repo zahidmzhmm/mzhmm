@@ -85,7 +85,7 @@ class App extends Component{
                         <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data2} />} />
                         <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services serviceData={this.state.data3} />} />
                         <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio adminData={this.state.data} />} />
-                        <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage adminData={this.state.data} />} />
+                        <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage reviewData={this.state.data4} />} />
                         <Route exact={true} path="/contact" component={()=>this.state.isLoading===false&&<GetIntoTouch adminData={this.state.data} />} />
                     </Switch>
                     <Footer />
