@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./Skills.module.css";
 import {Code} from "@material-ui/icons";
 import {AssetsDir} from "../../server/Config";
@@ -11,13 +11,14 @@ const skillImage = {
     backgroundSize: 'cover',
 }
 const Skills = ({skillData}) => {
+
     return (
         <div className={classes.skills_section} style={skillImage}>
             <div className="container">
                 <div className={classes.skills_icons}><span className="icon"><Code /></span></div>
                 <div className={classes.skill_title}><span className={classes.skill_title_tag}>My Skills</span></div>
                 <div className={classes.skill_skills}>
-                    <Skill skill={skillData} />
+                    {skillData.map((skill)=>(<Skill key={skill.id} skillData={skill} />))}
                 </div>
             </div>
         </div>

@@ -19,10 +19,10 @@ class Select
         $arrayall = mysqli_fetch_array($selectquery);
         return $arrayall;
     }
-    public function select_all_data($skill){
+    public function select_all_data($table){
         $db = new Db();
         $con = $db->con();
-        $select = "SELECT * FROM `$skill`";
+        $select = "SELECT * FROM `$table`";
         $skill_query = mysqli_query($con,$select);
         return $skill_query;
     }

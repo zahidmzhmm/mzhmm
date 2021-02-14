@@ -7,7 +7,9 @@ if (isset($_GET['page']) && $_GET['auth']){
         if ($_GET['page']=='home'){
             echo json_encode($admin);
         }elseif ($_GET['page']=='skill'){
-            echo json_encode($skill);
+            echo json_encode(mysqli_fetch_all($skill,MYSQLI_ASSOC));
+        }elseif ($_GET['page']=='service'){
+            echo json_encode(mysqli_fetch_all($services,MYSQLI_ASSOC));
         }
     }else{
         echo "Authorization Failed";

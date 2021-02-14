@@ -17,6 +17,7 @@ class App extends Component{
     state = {
         data: '',
         data2: '',
+        data3: '',
         isLoading: true
     }
     homeData = async () => {
@@ -37,9 +38,19 @@ class App extends Component{
             isLoading: false
         })
     }
+    serviceData = async () => {
+        const services = await axios.get(`${API}?page=service&auth=admin12123`).then(res=>{
+            return res;
+        })
+        this.setState({
+            data3: services,
+            isLoading: false
+        })
+    }
     componentDidMount() {
         this.homeData();
         this.skillData();
+        this.serviceData();
     }
     render() {
         return (
@@ -53,10 +64,10 @@ class App extends Component{
                     <Header />
                     <div style={{paddingTop:'1px'}} />
                     <Switch>
-                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home skillData={this.state.data2} homeData={this.state.data} />} />
+                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home serviceData={this.state.data3} skillData={this.state.data2} homeData={this.state.data} />} />
                         <Route exact={true} path="/about" component={()=>this.state.isLoading===false&&<AboutPage adminData={this.state.data} />} />
                         <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data} />} />
-                        <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services adminData={this.state.data} />} />
+                        <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services serviceData={this.state.data3} />} />
                         <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio adminData={this.state.data} />} />
                         <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage adminData={this.state.data} />} />
                         <Route exact={true} path="/contact" component={()=>this.state.isLoading===false&&<GetIntoTouch adminData={this.state.data} />} />
