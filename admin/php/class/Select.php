@@ -26,10 +26,10 @@ class Select
         $skill_query = mysqli_query($con,$select);
         return $skill_query;
     }
-    public function select_with_limit($tablename,$limit){
+    public function select_with_limit($tableName,$limit){
         $db = new Db();
         $con = $db->con();
-        $select = "SELECT * FROM `$tablename` ORDER BY id DESC LIMIT $limit";
+        $select = "SELECT * FROM `$tableName` ORDER BY id DESC LIMIT $limit";
         $query = mysqli_query($con,$select);
         return $query;
     }

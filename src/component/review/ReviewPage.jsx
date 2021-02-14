@@ -1,7 +1,5 @@
 import React from 'react';
 import classes from "./ReviewPage.module.css";
-import {Star} from '@material-ui/icons';
-import {AssetsDir} from "../../server/Config";
 import ReviewPageCom from "./ReviewPageCom";
 
 const ReviewPage = ({reviewData}) => {

@@ -7,7 +7,8 @@ const ReviewPageCom = ({review}) => {
     return (
         <div className={`${classes.column} col-md-6 col-lg-3 col-xs-13`}>
             <div className={`${classes.main_column} mt-4`}>
-                <div className={classes.image}><img src={`${AssetsDir}10911.jpg`} alt="" />
+                <div className={`${classes.image} m-3`}>
+                    <img src={`${AssetsDir+review.image}`} alt="" />
                 </div>
                 <div className={classes.description}>
                     <div className="row py-1">

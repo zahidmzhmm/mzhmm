@@ -9,7 +9,7 @@ const getIntoTouchImage = {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
 }
-const GetIntoTouch = () => {
+const GetIntoTouch = ({adminData}) => {
     return (
         <div className={classes.getIntoTouch} style={getIntoTouchImage}>
             <h2 className={`${classes.get_into_title} text-center mt-5`}><span className={classes.get_into_title_section}>  Get In Touch </span></h2>
@@ -47,15 +47,15 @@ const GetIntoTouch = () => {
                 <div className="row">
                     <div className={`${classes.getInto_column} col-md-6 col-lg-4 col-xs-12`}>
                         <h4>Phone</h4>
-                        <p>8801741424639</p>
+                        <p>{adminData.phone}</p>
                     </div>
                     <div className={`${classes.getInto_column} col-md-6 col-lg-4 col-xs-12`}>
                         <h4>Email</h4>
-                        <p>support@zahidmzhmm.com</p>
+                        <p>{adminData.email}</p>
                     </div>
                     <div className={`${classes.getInto_column} col-md-6 col-lg-4 col-xs-12`}>
                         <h4>Address</h4>
-                        <p>Assam Colony, Bou Bazar, Sopura, Rajshahi-6203, Bangladesh</p>
+                        <p>{adminData.addrs}</p>
                     </div>
                 </div>
             </div>

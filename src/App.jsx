@@ -20,6 +20,7 @@ class App extends Component{
         data3: [],
         data4: [],
         data5: [],
+        data6: [],
         isLoading: true
     }
     homeData = async () => {
@@ -62,11 +63,21 @@ class App extends Component{
             isLoading: false
         })
     }
+    portfolioData = async () => {
+        const portfolioData = await axios.get(`${API}?page=portfolio&auth=admin12123`).then(res=>{
+            return res;
+        })
+        this.setState({
+            data6: portfolioData.data,
+            isLoading: false
+        })
+    }
     componentDidMount() {
         this.homeData();
         this.skillData();
         this.serviceData();
         this.clientsData();
+        this.portfolioData();
     }
     render() {
         return (
@@ -80,11 +91,11 @@ class App extends Component{
                     <Header />
                     <div style={{paddingTop:'1px'}} />
                     <Switch>
-                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home shortReviewD={this.state.data5} ReviewD={this.state.data4} serviceData={this.state.data3} skillData={this.state.data2} homeData={this.state.data} />} />
+                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home portfolioData={this.state.data6} shortReviewD={this.state.data5} ReviewD={this.state.data4} serviceData={this.state.data3} skillData={this.state.data2} homeData={this.state.data} />} />
                         <Route exact={true} path="/about" component={()=>this.state.isLoading===false&&<AboutPage adminData={this.state.data} />} />
                         <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data2} />} />
                         <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services serviceData={this.state.data3} />} />
-                        <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio adminData={this.state.data} />} />
+                        <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio portfolioData={this.state.data6} />} />
                         <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage reviewData={this.state.data4} />} />
                         <Route exact={true} path="/contact" component={()=>this.state.isLoading===false&&<GetIntoTouch adminData={this.state.data} />} />
                     </Switch>

@@ -11,7 +11,7 @@ import Portfolio from "../portfolio/Portfolio";
 import Review from "../review/Review";
 import GetIntoTouch from "../getIntoTouch/GetIntoTouch";
 
-const Home = ({homeData,skillData,serviceData,ReviewD,shortReviewD}) => {
+const Home = ({homeData,skillData,serviceData,ReviewD,shortReviewD,portfolioData}) => {
     const data = homeData;
     const skill = skillData;
     const homeIMG = {
@@ -42,18 +42,18 @@ const Home = ({homeData,skillData,serviceData,ReviewD,shortReviewD}) => {
             <About adminData={homeData} />
             <Skills skillData={skill} />
             <Services serviceData={serviceData} />
-            <div className="row pb-5 mx-0">
-                <div className={classes.buttons}>
-                    <Link to="/services" className="button">View More</Link>
-                </div>
-            </div>
+            {/*<div className="row pb-5 mx-0">*/}
+            {/*    <div className={classes.buttons}>*/}
+            {/*        <Link to="/services" className="button">View More</Link>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <Review reviewData={ReviewD} shortReviewData={shortReviewD} />
-            <Portfolio adminData={homeData} />
-            <div className="row pb-5 mx-0">
-                <div className={classes.buttons}>
-                    <Link to="/portfolios" className="button">View More</Link>
-                </div>
-            </div>
+            <Portfolio portfolioData={portfolioData} />
+            {/*<div className="row pb-5 mx-0">*/}
+            {/*    <div className={classes.buttons}>*/}
+            {/*        <Link to="/portfolios" className="button">View More</Link>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div style={{paddingTop: '1px'}} />
             <GetIntoTouch adminData={homeData} />
         </>
