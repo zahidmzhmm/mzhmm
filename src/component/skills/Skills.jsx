@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from "./Skills.module.css";
 import {Code} from "@material-ui/icons";
 import {AssetsDir} from "../../server/Config";
@@ -11,7 +11,6 @@ const skillImage = {
     backgroundSize: 'cover',
 }
 const Skills = ({skillData}) => {
-
     return (
         <div className={classes.skills_section} style={skillImage}>
             <div className="container">

@@ -11,7 +11,7 @@ const reviewImage = {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
 }
-const Review = () => {
+const Review = ({shortReviewData,reviewData}) => {
     return (
         <div className={classes.review} style={reviewImage}>
             <div className="container">
@@ -22,32 +22,29 @@ const Review = () => {
             </div>
             <div className="container">
                 <ReactElasticCarousel>
-                    <ReviewCom key="1" userImage="1905.jpg" userComment="Testing" userName="Username" />
-                    <ReviewCom key="2" userImage="1905.jpg" userComment="Testing" userName="Username" />
-                    <ReviewCom key="3" userImage="1905.jpg" userComment="Testing" userName="Username" />
-                    <ReviewCom key="4" userImage="1905.jpg" userComment="Testing" userName="Username" />
+                    {reviewData.map((reviews)=>(<ReviewCom key={reviews.id} userImage={reviews.image} userComment={reviews.comment} userName={reviews.name} />))}
                 </ReactElasticCarousel>
             </div>
             <div className="container mt-5">
                 <div className="row text-center">
                     <div className={`${classes.clientColumn} col-md-6 col-lg-3 col-xs-12`}>
                         <div className={classes.clientIcon}><span><Mood /></span></div>
-                        <div className={`${classes.clientNumber} counter`}>12</div>
+                        <div className={`${classes.clientNumber} counter`}>{shortReviewData.customer}</div>
                         <p className={classes.clientText}>Customers</p>
                     </div>
                     <div className={`${classes.clientColumn} col-md-6 col-lg-3 col-xs-12`}>
                         <div className={classes.clientIcon}><span><Layers /></span></div>
-                        <div className={`${classes.clientNumber} counter`}>13</div>
+                        <div className={`${classes.clientNumber} counter`}>{shortReviewData.project}</div>
                         <p className={classes.clientText}>Projects Completed</p>
                     </div>
                     <div className={`${classes.clientColumn} col-md-6 col-lg-3 col-xs-12`}>
                         <div className={classes.clientIcon}><span><Star /></span></div>
-                        <div className={`${classes.clientNumber} counter`}>14</div>
+                        <div className={`${classes.clientNumber} counter`}>{shortReviewData.review}</div>
                         <p className={classes.clientText}>Full Review</p>
                     </div>
                     <div className={`${classes.clientColumn} col-md-6 col-lg-3 col-xs-12`}>
                         <div className={classes.clientIcon}><span><Sync /></span></div>
-                        <div className={`${classes.clientNumber} counter`}>15</div>
+                        <div className={`${classes.clientNumber} counter`}>{shortReviewData.running}</div>
                         <p className={classes.clientText}>Running Project</p>
                     </div>
                 </div>

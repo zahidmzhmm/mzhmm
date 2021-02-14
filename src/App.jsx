@@ -15,9 +15,11 @@ import {Spinner} from "react-bootstrap";
 
 class App extends Component{
     state = {
-        data: '',
-        data2: '',
-        data3: '',
+        data: [],
+        data2: [],
+        data3: [],
+        data4: [],
+        data5: [],
         isLoading: true
     }
     homeData = async () => {
@@ -39,11 +41,24 @@ class App extends Component{
         })
     }
     serviceData = async () => {
-        const services = await axios.get(`${API}?page=service&auth=admin12123`).then(res=>{
+        const serviceData = await axios.get(`${API}?page=service&auth=admin12123`).then(res=>{
             return res;
         })
         this.setState({
-            data3: services,
+            data3: serviceData.data,
+            isLoading: false
+        })
+    }
+    clientsData = async () => {
+        const clientsData = await axios.get(`${API}?page=clients&auth=admin12123`).then(res=>{
+            return res
+        })
+        const shortReview = await axios.get(`${API}?page=short_reviews&auth=admin12123`).then(res=>{
+            return res
+        })
+        this.setState({
+            data4: clientsData.data,
+            data5: shortReview.data,
             isLoading: false
         })
     }
@@ -51,6 +66,7 @@ class App extends Component{
         this.homeData();
         this.skillData();
         this.serviceData();
+        this.clientsData();
     }
     render() {
         return (
@@ -64,9 +80,9 @@ class App extends Component{
                     <Header />
                     <div style={{paddingTop:'1px'}} />
                     <Switch>
-                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home serviceData={this.state.data3} skillData={this.state.data2} homeData={this.state.data} />} />
+                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home shortReviewD={this.state.data5} ReviewD={this.state.data4} serviceData={this.state.data3} skillData={this.state.data2} homeData={this.state.data} />} />
                         <Route exact={true} path="/about" component={()=>this.state.isLoading===false&&<AboutPage adminData={this.state.data} />} />
-                        <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data} />} />
+                        <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data2} />} />
                         <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services serviceData={this.state.data3} />} />
                         <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio adminData={this.state.data} />} />
                         <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage adminData={this.state.data} />} />

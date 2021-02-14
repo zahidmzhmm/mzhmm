@@ -22,7 +22,7 @@ class Select
     public function select_all_data($table){
         $db = new Db();
         $con = $db->con();
-        $select = "SELECT * FROM `$table`";
+        $select = "SELECT * FROM `$table` order by id desc ";
         $skill_query = mysqli_query($con,$select);
         return $skill_query;
     }

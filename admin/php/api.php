@@ -10,6 +10,10 @@ if (isset($_GET['page']) && $_GET['auth']){
             echo json_encode(mysqli_fetch_all($skill,MYSQLI_ASSOC));
         }elseif ($_GET['page']=='service'){
             echo json_encode(mysqli_fetch_all($services,MYSQLI_ASSOC));
+        }elseif ($_GET['page']=='clients'){
+            echo json_encode(mysqli_fetch_all($works,MYSQLI_ASSOC));
+        }elseif ($_GET['page']=='short_reviews'){
+            echo json_encode(mysqli_fetch_array($short_reviews));
         }
     }else{
         echo "Authorization Failed";
