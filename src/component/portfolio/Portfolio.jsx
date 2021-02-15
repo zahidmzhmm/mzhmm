@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{useState} from 'react';
 import classes from "./Portfolio.module.css";
 import PortfolioCom from "./PortfolioCom";
+import {Modal,Button} from "react-bootstrap";
 
 const Portfolio = ({portfolioData}) => {
     return (

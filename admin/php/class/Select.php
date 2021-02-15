@@ -33,4 +33,11 @@ class Select
         $query = mysqli_query($con,$select);
         return $query;
     }
+
+    public function select_with_type($table, $type)
+    {
+        $db = new Db();
+        $con = $db->con();
+        return mysqli_query($con,"SELECT * FROM `$table` where `type`='$type'");
+    }
 }

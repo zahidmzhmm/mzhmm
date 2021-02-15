@@ -4,7 +4,7 @@
 class Contact
 {
     public function email_send($name,$email,$subject,$massage){
-        $mail            = new PHPMailer;
+        $mail            = new PHPMailer(true);
         $mail->SMTPDebug = 4;
         $mail->isSMTP();
         $mail->Host       = 'indigo.cloudns.io';
@@ -15,13 +15,11 @@ class Contact
         $mail->Port       = 465;
         $mail->setFrom( EMAIL,$name );
         $mail->addAddress('info@zahidmzhmm.com');
-        $mail->addReplyTo( EMAIL );
+//        $mail->addReplyTo( EMAIL );
         $mail->isHTML( true );
         $mail->Subject   = $subject;
         $mail->Body      = "Name: $name; Email: $email; Subject: $subject; Massage: $massage";
         // $mail->AltBody   = "";
-        header( "location: ../../thank-you");
-        $send            = $mail->send();
-        return $send;
+        $mail->send();
     }
 }

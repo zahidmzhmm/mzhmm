@@ -13,6 +13,8 @@ import axios from "axios";
 import {API} from "./server/Config";
 import {Spinner} from "react-bootstrap";
 import ErrorPage from "./component/404/ErrorPage";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.min.css';
 
 class App extends Component{
     state = {
@@ -24,6 +26,7 @@ class App extends Component{
         data6: [],
         data7: [],
         data8: [],
+        data9: [],
         isLoading: true
     }
     homeData = async () => {
@@ -93,6 +96,15 @@ class App extends Component{
             isLoading: false
         })
     }
+    categories2 = async () => {
+        const categories2 = await axios.get(`${API}?page=categories2&auth=admin12123`).then(res=>{
+            return res;
+        })
+        this.setState({
+            data9: categories2.data,
+            isLoading: false
+        })
+    }
     componentDidMount() {
         this.homeData();
         this.skillData();
@@ -101,6 +113,7 @@ class App extends Component{
         this.portfolioData();
         this.portfolioWithLimit();
         this.serviceWithLimit();
+        this.categories2();
     }
     render() {
         return (
@@ -112,9 +125,12 @@ class App extends Component{
                     </div>
                     }
                     <Header />
+                    <div>
+                        <ToastContainer style={{marginTop: '2.3rem'}} />
+                    </div>
                     <div style={{paddingTop:'1px'}} />
                     <Switch>
-                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home portfolioData={this.state.data7} shortReviewD={this.state.data5} ReviewD={this.state.data4} serviceData={this.state.data8} skillData={this.state.data2} homeData={this.state.data} />} />
+                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home categories2={this.state.data9} portfolioData={this.state.data7} shortReviewD={this.state.data5} ReviewD={this.state.data4} homeServiceData={this.state.data8} skillData={this.state.data2} homeData={this.state.data} />} />
                         <Route exact={true} path="/about" component={()=>this.state.isLoading===false&&<AboutPage adminData={this.state.data} />} />
                         <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data2} />} />
                         <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services serviceData={this.state.data3} />} />

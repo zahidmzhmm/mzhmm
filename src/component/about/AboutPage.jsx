@@ -15,7 +15,7 @@ const AboutPage = ({adminData}) => {
                         <h2 className="text-center">{adminData.title}</h2>
                         <div className="row">
                             <div className="description" style={{display:'table'}}>
-                                {description}
+                                {adminData.short_description}
                             </div>
                         </div>
                     </div>

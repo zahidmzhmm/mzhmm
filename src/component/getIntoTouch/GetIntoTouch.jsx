@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./GetIntoTouch.module.css";
-import {AssetsDir} from "../../server/Config";
+import {API, AssetsDir} from "../../server/Config";
+import {LinearProgress} from "@material-ui/core";
+import {toast} from "react-toastify";
+import axios from "axios";
 
 const getIntoTouchImage = {
     background: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0,0.8)),url('${AssetsDir}coding_four.jpg')`,
@@ -10,30 +13,57 @@ const getIntoTouchImage = {
     backgroundAttachment: 'fixed',
 }
 const GetIntoTouch = ({adminData}) => {
+    const [name,setName]=useState('');
+    const [email,setEmail]=useState('');
+    const [subject,setSubject]=useState('');
+    const [message,setMessage]=useState('');
+    const [isLoading,setIsLoading]=useState(false);
+    const submitForm = async (e) => {
+        e.preventDefault()
+        setIsLoading(true);
+        const postBody = {
+            "name":name,
+            "email":email,
+            "subject":subject,
+            "message":message,
+            "auth":"admin12123",
+            "send_message":"send_message"
+        }
+        await axios.post(`${API}`,postBody).then(res=>{
+            return res;
+        })
+        setIsLoading(false);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+        toast("Message send success");
+    }
     return (
         <div className={classes.getIntoTouch} style={getIntoTouchImage}>
             <h2 className={`${classes.get_into_title} text-center mt-5`}><span className={classes.get_into_title_section}>  Get In Touch </span></h2>
-            <form className="mt-5">
+            <form onSubmit={submitForm} className="mt-5">
                 <div className="container">
+                    {isLoading===true&& <LinearProgress className="mx-3" color="primary" />}
                     <div className="row px-3">
                         <div className="col-lg-6 m-auto">Title</div>
                     </div>
                     <div className={`${classes.getIntoForm_section} row my-4 mx-0`}>
                         <div className="col-md-6 pt-2">
-                            <input type="text" name="name" required className="form_ne" placeholder="Name *" />
+                            <input value={name} type="text" name="name" required onChange={(e)=>setName(e.target.value)} className="form_ne" placeholder="Name *" />
                         </div>
                         <div className="col-md-6 pt-2">
-                            <input type="email" name="email" required className="form_ne" placeholder="Email *" />
+                            <input value={email} type="email" name="email" required onChange={(e)=>setEmail(e.target.value)} className="form_ne" placeholder="Email *" />
                         </div>
                     </div>
                     <div className={`${classes.getIntoForm_section} row my-4 mx-0`}>
                         <div className="col-12">
-                            <input type="text" name="subject" required className="" placeholder="Subject *" />
+                            <input value={subject} type="text" name="subject" required className="" onChange={(e)=>setSubject(e.target.value)} placeholder="Subject *" />
                         </div>
                     </div>
                     <div className={`${classes.getIntoForm_section} row my-4 mx-0`}>
                         <div className="col-12">
-                            <textarea name="massage" id="" required className={classes.getIntoMassage} cols="30" placeholder="Massage *" rows="8" />
+                            <textarea name="massage" id="" required onChange={(e)=>setMessage(e.target.value)} className={classes.getIntoMassage} cols="30" placeholder="Massage *" rows="8" value={message} />
                         </div>
                     </div>
                     <div className="row buttons mx-0">
