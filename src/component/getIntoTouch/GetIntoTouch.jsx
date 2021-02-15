@@ -56,9 +56,6 @@ const GetIntoTouch = (props) => {
                 <form onSubmit={submitForm} className="mt-5">
                     <div className="container">
                         {isLoading===true&& <LinearProgress className="mx-3" color="primary" />}
-                        <div className="row px-3">
-                            <div className="col-lg-6 m-auto">Title</div>
-                        </div>
                         <div className={`${classes.getIntoForm_section} row my-4 mx-0`}>
                             <div className="col-md-6 pt-2">
                                 <input value={name} type="text" name="name" required onChange={(e)=>setName(e.target.value)} className="form_ne" placeholder="Name *" />
