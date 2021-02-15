@@ -50,7 +50,7 @@ if (isset($_COOKIE["admin"])){
                     </thead>
                     <tbody>
                     <?php
-                    while ($category = mysqli_fetch_array($categorys)){
+                    while ($category = mysqli_fetch_array($categories)){
                         $admin_id = $category["admin_id"];
                         if ($admin_id==$id){
                             ?>

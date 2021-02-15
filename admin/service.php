@@ -55,7 +55,7 @@ if (isset($_COOKIE["admin"])){
                             <tr>
                                 <td><?php echo $array["name"]; ?></td>
                                 <td><?php echo $array["description"]; ?></td>
-                                <td><img style="width: 10rem;" src="../img/icon/<?php echo $array['file']; ?>" alt=""></td>
+                                <td><img style="width: 10rem;" src="../uploads/icon/<?php echo $array['file']; ?>" alt=""></td>
                                 <td><a href="php/delete.php?id=<?php echo $array['id']; ?>&table=service&dis=icon&file=<?php echo $array['file']; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a></td>
                             </tr>
                             <?php

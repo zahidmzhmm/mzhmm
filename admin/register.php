@@ -22,7 +22,7 @@ if (isset($_COOKIE["admin"])){
 		<div class="inside">
 			<div class="title"><strong>Admin Panel</strong></div>
 			<div class="frm-title">Welcome Back</div>
-			<a href="#" class="avatar"><img src="img/main.jpg" alt=""></a>
+			<a href="#" class="avatar"><img src="../uploads/main.jpg" alt=""></a>
 <!--			<p class="text-center">Enter your Name, secure Pin and new Pin</p>-->
             <?php if (isset($_SESSION["msg"])){
                 echo $_SESSION["msg"];

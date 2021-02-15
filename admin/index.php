@@ -41,7 +41,7 @@
                 ?>
 			<div class="col-lg-3 col-md-6 col-xs-12">
 				<div class="box-content user-info">
-					<div class="avatar"><img src="img/<?php echo $work["image"]; ?>" alt=""></div>
+					<div class="avatar"><img src="../uploads/<?php echo $work["image"]; ?>" alt=""></div>
 					<div class="right-content">
 						<h4 class="name"><?php echo $work["name"]; ?></h4>
                         <p><?php echo $work["country"]; ?></p>

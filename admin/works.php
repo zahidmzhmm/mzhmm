@@ -75,7 +75,7 @@ if (isset($_COOKIE["admin"])){
                                 <td><?php echo $work["comment"]; ?></td>
                                 <td><?php echo $work["country"]; ?></td>
                                 <td class="text-warning"><?php echo $work["review"]; ?> <i class="fa fa-star"></i></td>
-                                <td><img style="width: 10rem;" src="img/<?php echo $work['image']; ?>" alt=""></td>
+                                <td><img style="width: 10rem;" src="../uploads/<?php echo $work['image']; ?>" alt=""></td>
                                 <td><a href="php/delete.php?id=<?php echo $work['id']; ?>&table=works" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a></td>
                             </tr>
                             <?php

@@ -39,15 +39,7 @@ if (isset($_COOKIE["admin"])){
                                     <li class="form-group">
                                         <input type="number" name="running" value="<?= $short_rev['running'] ? $short_rev['running'] : '' ?>" class="form-control" placeholder="Running">
                                     </li>
-                                    <li class="form-group">
-                                        <?php
-                                        if (isset($short_rev['admin_id'])){
-                                            ?>
-                                            <button name="short_review_edit" class="btn btn-sm btn-primary">Update</button>
-                                            <?
-                                        }
-                                        ?>
-                                    </li>
+                                    <button name="short_review_edit" class="btn btn-sm btn-primary">Update</button>
                                 </ul>
                             </form>
                             <?php

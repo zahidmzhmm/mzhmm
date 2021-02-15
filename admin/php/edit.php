@@ -22,7 +22,7 @@ if (isset($_REQUEST["edit_profile"])){
     $skype = $data["skype"];
     $freelance_acc = $data["freelance"];
     $resume = $data["resume"];
-    $old_file = '../img/'.$data["old_file"];
+    $old_file = '../../uploads/'.$data["old_file"];
     $file = $_FILES["edit_file"];
     $filename = $file["name"];
     $rand = rand(9,999);
@@ -30,7 +30,7 @@ if (isset($_REQUEST["edit_profile"])){
     if ($strlen_file>0){
         $profile_file_name = $rand.str_replace(' ','',strtolower($filename));
         $filename = $file["tmp_name"];
-        $dir = '../img/'.$profile_file_name;
+        $dir = '../../uploads/'.$profile_file_name;
         unlink($old_file);
         $upload = move_uploaded_file($filename,$dir);
         if ($upload){
@@ -80,7 +80,7 @@ if (isset($_REQUEST["edit_profile"])){
 }elseif(isset($_REQUEST["upload_main_image"])){
     $data = $_POST;
     $id = $data["main_profile_image_id"];
-    $old_file = '../img/'.$data["old_file"];
+    $old_file = '../../uploads/'.$data["old_file"];
     $file = $_FILES["main_file"];
     $filename = $file["name"];
     $rand = rand(9,999);
@@ -88,7 +88,7 @@ if (isset($_REQUEST["edit_profile"])){
     if ($strlen_file>0){
         $main_profile_image = $rand.str_replace(' ','',strtolower($filename));
         $filename = $file["tmp_name"];
-        $dir = '../img/'.$main_profile_image;
+        $dir = '../../uploads/'.$main_profile_image;
 //        unlink($old_file);
         $upload = move_uploaded_file($filename,$dir);
         if ($upload){
@@ -108,7 +108,7 @@ if (isset($_REQUEST["edit_profile"])){
 }elseif(isset($_REQUEST["upload_logo"])) {
     $data = $_POST;
     $id = $data["admin_id_no"];
-    $old_file = '../img/'.$data["old_file"];
+    $old_file = '../../uploads/'.$data["old_file"];
     $file = $_FILES["main_file"];
     $filename = $file["name"];
     $rand = rand(9,999);
@@ -116,7 +116,7 @@ if (isset($_REQUEST["edit_profile"])){
     if ($strlen_file>0){
         $logo = $rand.str_replace(' ','',strtolower($filename));
         $filetmp = $file["tmp_name"];
-        $dir = '../img/'.$logo;
+        $dir = '../../uploads/'.$logo;
         $upload = move_uploaded_file($filetmp,$dir);
         if ($upload){
             $data = "UPDATE `admin` SET `logo`='$logo' WHERE id='$id'";
@@ -135,7 +135,7 @@ if (isset($_REQUEST["edit_profile"])){
 }elseif(isset($_REQUEST["upload_favicon"])) {
     $data = $_POST;
     $id = $data["admin_id_no"];
-    $old_file = '../img/'.$data["old_file"];
+    $old_file = '../../uploads/'.$data["old_file"];
     $file = $_FILES["main_file"];
     $filename = $file["name"];
     $rand = rand(9,999);
@@ -143,7 +143,7 @@ if (isset($_REQUEST["edit_profile"])){
     if ($strlen_file>0){
         $favicon = $rand.str_replace(' ','',strtolower($filename));
         $filetmp = $file["tmp_name"];
-        $dir = '../img/'.$favicon;
+        $dir = '../../uploads/'.$favicon;
         $upload = move_uploaded_file($filetmp,$dir);
         if ($upload){
             $data = "UPDATE `admin` SET `favicon`='$favicon' WHERE id='$id'";
@@ -172,8 +172,8 @@ if (isset($_REQUEST["edit_profile"])){
     $filename = str_replace(" ","",strtolower($filenam));
     $rand = rand(999,99999);
     $image = $rand.$filename;
-    $des = "../../img/blog/".$image;
-    $old = "../../img/blog/".$old_file;
+    $des = "../../uploads/blog/".$image;
+    $old = "../../uploads/blog/".$old_file;
     $dis = str_replace(" ","-",strtolower($name));
     $dir = $dis;
     unlink($old);

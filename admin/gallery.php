@@ -25,13 +25,13 @@ if (isset($_COOKIE["admin"])){
                     </thead>
                     <tbody>
                     <?php
-                    while ($gallery = mysqli_fetch_array($gallerys)){
+                    while ($gallery = mysqli_fetch_array($galleries)){
                         $admin_id = $gallery["admin_id"];
                         if ($admin_id==$id){
                             ?>
                             <tr>
                                 <td><?php $file = $gallery["files"]; $file_explode = explode(".",$file); echo $filename = $file_explode[0]; ?></td>
-                                <td><?php include "website.txt";?>/img/gallery/<?php echo $gallery["files"]; ?></td>
+                                <td><?php include "website.txt";?>/uploads/gallery/<?php echo $gallery["files"]; ?></td>
                                 <td><?php $type = $gallery["type"]; if($type==2){ ?> <i class="fa fa-lock text-danger"></i> <?php }else{ ?> <i class="fa text-success fa-unlock-alt"></i> <?php } ?></td>
                                 <td><a href="php/delete.php?id=<?php echo $gallery['id']; ?>&table=gallery&file=<?php echo $gallery['files']; ?>&dis=gallery" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a></td>
                             </tr>

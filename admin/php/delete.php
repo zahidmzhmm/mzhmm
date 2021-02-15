@@ -9,7 +9,7 @@ if (isset($_REQUEST["id"]) && isset($_REQUEST["table"])) {
     $table = $data["table"];
     $dis = $data["dis"];
     $file = $data["file"];
-    $destination = "../../img/".$dis."/".$file;
+    $destination = "../../uploads/".$dis."/".$file;
     unlink($destination);
     $delete = "DELETE FROM `$table` WHERE id='$id'";
     $deleted = $insert->insertskill($delete);

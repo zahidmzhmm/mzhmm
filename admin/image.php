@@ -19,9 +19,9 @@ if (isset($_COOKIE["admin"])){
                     <div class="box-content card">
                         <h4 class="box-title"><i class="fa fa-image ico"></i>Images</h4>
                         <div class="text-center margin-top-10 margin-bottom-10">
-                            <img style="width: 20rem;" src="img/<?php echo $admin_only["main_image"]; ?>" alt="">
-                            <img style="width: 20rem;" src="img/<?php echo $admin_only["logo"]; ?>" alt="">
-                            <img style="width: 5rem;" src="img/<?php echo $admin_only["favicon"]; ?>" alt="">
+                            <img style="width: 20rem;" src="../uploads/<?php echo $admin_only["main_image"]; ?>" alt="">
+                            <img style="width: 20rem;" src="../uploads/<?php echo $admin_only["logo"]; ?>" alt="">
+                            <img style="width: 5rem;" src="../uploads/<?php echo $admin_only["favicon"]; ?>" alt="">
                         </div>
                     </div>
                 </div>

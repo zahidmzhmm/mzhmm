@@ -33,8 +33,6 @@
         <!--		<a href="index.html" class="btn btn-info">Return home</a>-->
     </div>
 </div>
-<script src="assets/script/html5shiv.min.js"></script>
-<script src="assets/script/respond.min.js"></script>
 <script src="assets/scripts/jquery.min.js"></script>
 <script src="assets/scripts/modernizr.min.js"></script>
 <script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>

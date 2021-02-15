@@ -30,7 +30,7 @@ if (isset($_REQUEST["skill_save"])){
     $rand = rand(99,999);
     $file_name_rp = str_replace(' ','',strtolower($filename));
     $image = $rand.$file_name_rp;
-    $dir = "../../img/portfolio/".$image;
+    $dir = "../../uploads/portfolio/".$image;
     $upload = move_uploaded_file($filetmp,$dir);
     if ($upload){
         $insert_query = "INSERT INTO `portfolio`(`name`, `description`, `file`, `admin_id`) VALUES ('$name','$description','$image','$admin')";
@@ -56,7 +56,7 @@ if (isset($_REQUEST["skill_save"])){
     $rand = rand(99,999);
     $file_name_rp = str_replace(' ','',strtolower($filename));
     $image = $rand.$file_name_rp;
-    $dir = "../../img/icon/".$image;
+    $dir = "../../uploads/icon/".$image;
     $upload = move_uploaded_file($filetmp,$dir);
     if ($upload){
         $insert_query = "INSERT INTO `service`(`name`, `description`, `file`, `admin_id`) VALUES ('$name','$description','$image','$admin')";
@@ -96,7 +96,7 @@ if (isset($_REQUEST["skill_save"])){
     }else{
         $rand = rand(9,999);
         $image_name = $rand.str_replace(" ",'', strtolower($file["name"]));
-        $upload_dir = "../img/".$image_name;
+        $upload_dir = "../../uploads/".$image_name;
         $upload = move_uploaded_file($file_tmp,$upload_dir);
         if ($upload){
             $insert_with = "INSERT INTO `works`(`name`, `image`, `comment`, `review`, `country`, `admin_id`) VALUES ('$name','$image_name','$comment','$review','$country','$admin_id')";
@@ -128,7 +128,7 @@ if (isset($_REQUEST["skill_save"])){
     $filename = str_replace(" ","",strtolower($filenam));
     $rand = rand(999,99999);
     $image = $rand.$filename;
-    $des = "../../img/blog/".$image;
+    $des = "../../uploads/blog/".$image;
     $dis = str_replace(" ","-",strtolower($name));
     $dir = $dis;
     $upload = move_uploaded_file($filetmp,$des);
@@ -172,7 +172,7 @@ if (isset($_REQUEST["skill_save"])){
     $rand = rand(99,999);
     $file_name_rp = str_replace(' ','',strtolower($filename));
     $files = $rand.$file_name_rp;
-    $dir = "../../img/gallery/".$files;
+    $dir = "../../uploads/gallery/".$files;
     $upload = move_uploaded_file($filetmp,$dir);
     if ($upload){
         $insert_query = "INSERT INTO `gallery` (`files`, `admin_id`, `type`) VALUES ('$files', '$admin_id','$type');";
