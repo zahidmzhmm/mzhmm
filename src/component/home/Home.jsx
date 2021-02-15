@@ -10,8 +10,9 @@ import Portfolio from "../portfolio/Portfolio";
 import Review from "../review/Review";
 import GetIntoTouch from "../getIntoTouch/GetIntoTouch";
 import TextLoop from "react-text-loop";
+import MetaTags from 'react-meta-tags';
 
-const Home = ({homeData,skillData,homeServiceData,ReviewD,shortReviewD,portfolioData,categories2}) => {
+const Home = ({mTitle,mDescription,homeData,skillData,homeServiceData,ReviewD,shortReviewD,portfolioData,categories2}) => {
     const data = homeData;
     const skill = skillData;
     const homeIMG = {
@@ -22,6 +23,11 @@ const Home = ({homeData,skillData,homeServiceData,ReviewD,shortReviewD,portfolio
     }
     return (
         <>
+            <MetaTags>
+                <title>{mTitle}</title>
+                <meta property="og:title" content={mTitle} />
+                <meta name="description" content={mDescription} />
+            </MetaTags>
             <div className={classes.home}>
                 <div className={classes.homeImage}>
                     <div className={classes.imageAdd} style={homeIMG} />

@@ -130,13 +130,13 @@ class App extends Component{
                     </div>
                     <div style={{paddingTop:'1px'}} />
                     <Switch>
-                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home categories2={this.state.data9} portfolioData={this.state.data7} shortReviewD={this.state.data5} ReviewD={this.state.data4} homeServiceData={this.state.data8} skillData={this.state.data2} homeData={this.state.data} />} />
-                        <Route exact={true} path="/about" component={()=>this.state.isLoading===false&&<AboutPage adminData={this.state.data} />} />
-                        <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data2} />} />
-                        <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services serviceData={this.state.data3} />} />
-                        <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio portfolioData={this.state.data6} />} />
-                        <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage reviewData={this.state.data4} />} />
-                        <Route exact={true} path="/contact" component={()=>this.state.isLoading===false&&<GetIntoTouch adminData={this.state.data} />} />
+                        <Route exact={true} path="/about" component={()=>this.state.isLoading===false&&<AboutPage title="About" description={this.state.data.short_description} adminData={this.state.data} />} />
+                        <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills title="Skills" description={this.state.data.short_description} skillData={this.state.data2} />} />
+                        <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services title="Services" description={this.state.data.short_description} serviceData={this.state.data3} />} />
+                        <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio title="Portfolios" description={this.state.data.short_description} portfolioData={this.state.data6} />} />
+                        <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage title="Reviews" description={this.state.data.short_description} reviewData={this.state.data4} />} />
+                        <Route exact={true} path="/contact" component={()=>this.state.isLoading===false&&<GetIntoTouch title="Contact" description={this.state.data.short_description} adminData={this.state.data} />} />
+                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home mTitle="Home" mDescription={this.state.data.short_description} categories2={this.state.data9} portfolioData={this.state.data7} shortReviewD={this.state.data5} ReviewD={this.state.data4} homeServiceData={this.state.data8} skillData={this.state.data2} homeData={this.state.data} />} />
                         <Route path="" component={()=>this.state.isLoading===false&&<ErrorPage />} />
                     </Switch>
                     <Footer />

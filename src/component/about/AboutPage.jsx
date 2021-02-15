@@ -1,10 +1,17 @@
 import React from 'react';
 import classes from "./AboutPage.module.css";
 import {AssetsDir} from "../../server/Config";
+import MetaTags from "react-meta-tags";
 
-const AboutPage = ({adminData}) => {
+const AboutPage = ({adminData,title,description}) => {
     return (
         <>
+
+            <MetaTags>
+                <title>{title}</title>
+                <meta property="og:title" content={title} />
+                <meta name="description" content={description} />
+            </MetaTags>
             <div className="container pb-5 mb-5">
                 <div className={classes.about}>
                     <div className="container mt-5 pt-5">

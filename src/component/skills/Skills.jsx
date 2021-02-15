@@ -10,7 +10,7 @@ const skillImage = {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
 }
-const Skills = ({skillData}) => {
+const Skills = ({skillData,title,description}) => {
     return (
         <div className={classes.skills_section} style={skillImage}>
             <div className="container">

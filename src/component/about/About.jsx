@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from "./About.module.css";
-import {Link} from "react-router-dom";
 import {Facebook, LinkedIn, Twitter, YouTube} from "@material-ui/icons";
 import {AssetsDir} from "../../server/Config";
 
