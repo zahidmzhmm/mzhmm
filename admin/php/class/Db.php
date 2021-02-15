@@ -6,9 +6,9 @@ class Db
     public function con()
     {
         $host = "localhost";
-        $user = "root";
-        $pass = "";
-        $db = "zahid";
+        $user = "mzhmm_admin";
+        $pass = "m-zhm118899S";
+        $db = "mzhmm_admin";
         $con = mysqli_connect($host,$user,$pass,$db);;
         return $con;
     }
