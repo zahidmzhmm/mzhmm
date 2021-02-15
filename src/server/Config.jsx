@@ -1,2 +1,2 @@
-export const AssetsDir = 'http://localhost/mzhmm/uploads/';
-export const API = 'http://localhost/mzhmm/admin/php/api.php';
+export const AssetsDir = 'https://zahidmzhmm.com/uploads/';
+export const API = 'https://zahidmzhmm.com/admin/php/api.php';
