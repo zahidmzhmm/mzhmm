@@ -3,7 +3,6 @@ import classes from "./AboutPage.module.css";
 import {AssetsDir} from "../../server/Config";
 
 const AboutPage = ({adminData}) => {
-    const description = adminData.description;
     return (
         <>
             <div className="container pb-5 mb-5">
