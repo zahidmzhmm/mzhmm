@@ -42,18 +42,18 @@ const Home = ({homeData,skillData,serviceData,ReviewD,shortReviewD,portfolioData
             <About adminData={homeData} />
             <Skills skillData={skill} />
             <Services serviceData={serviceData} />
-            {/*<div className="row pb-5 mx-0">*/}
-            {/*    <div className={classes.buttons}>*/}
-            {/*        <Link to="/services" className="button">View More</Link>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+            <div className="row pb-5 mx-0">
+                <div className={classes.buttons}>
+                    <Link to="/services" className="button">View More</Link>
+                </div>
+            </div>
             <Review reviewData={ReviewD} shortReviewData={shortReviewD} />
             <Portfolio portfolioData={portfolioData} />
-            {/*<div className="row pb-5 mx-0">*/}
-            {/*    <div className={classes.buttons}>*/}
-            {/*        <Link to="/portfolios" className="button">View More</Link>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+            <div className="row pb-5 mx-0">
+                <div className={classes.buttons}>
+                    <Link to="/portfolios" className="button">View More</Link>
+                </div>
+            </div>
             <div style={{paddingTop: '1px'}} />
             <GetIntoTouch adminData={homeData} />
         </>

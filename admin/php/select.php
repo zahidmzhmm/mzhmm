@@ -12,6 +12,6 @@ $services = $select->select_all_data("service");
 $short_reviews = $select->select_all_data("short_review");
 $skill = $select->select_all_data("skill");
 $works = $select->select_all_data("works");
-$portfolios_with_limit = $select->select_with_limit("portfolio",6);
+$portfolios_with_limit = $select->select_with_limit("portfolio",9);
 $services_with_limit = $select->select_with_limit("service",6);
 ?>

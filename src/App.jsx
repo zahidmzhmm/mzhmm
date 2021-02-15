@@ -12,6 +12,7 @@ import AboutPage from "./component/about/AboutPage";
 import axios from "axios";
 import {API} from "./server/Config";
 import {Spinner} from "react-bootstrap";
+import ErrorPage from "./component/404/ErrorPage";
 
 class App extends Component{
     state = {
@@ -21,6 +22,8 @@ class App extends Component{
         data4: [],
         data5: [],
         data6: [],
+        data7: [],
+        data8: [],
         isLoading: true
     }
     homeData = async () => {
@@ -72,12 +75,32 @@ class App extends Component{
             isLoading: false
         })
     }
+    portfolioWithLimit = async () => {
+        const portfolioWithLimit = await axios.get(`${API}?page=portfolio_with_limit&auth=admin12123`).then(res=>{
+            return res;
+        })
+        this.setState({
+            data7: portfolioWithLimit.data,
+            isLoading: false
+        })
+    }
+    serviceWithLimit = async () => {
+        const serviceWithLimit = await axios.get(`${API}?page=service_with_limit&auth=admin12123`).then(res=>{
+            return res;
+        })
+        this.setState({
+            data8: serviceWithLimit.data,
+            isLoading: false
+        })
+    }
     componentDidMount() {
         this.homeData();
         this.skillData();
         this.serviceData();
         this.clientsData();
         this.portfolioData();
+        this.portfolioWithLimit();
+        this.serviceWithLimit();
     }
     render() {
         return (
@@ -91,13 +114,14 @@ class App extends Component{
                     <Header />
                     <div style={{paddingTop:'1px'}} />
                     <Switch>
-                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home portfolioData={this.state.data6} shortReviewD={this.state.data5} ReviewD={this.state.data4} serviceData={this.state.data3} skillData={this.state.data2} homeData={this.state.data} />} />
+                        <Route exact={true} path="/" component={()=> this.state.isLoading===false&&<Home portfolioData={this.state.data7} shortReviewD={this.state.data5} ReviewD={this.state.data4} serviceData={this.state.data8} skillData={this.state.data2} homeData={this.state.data} />} />
                         <Route exact={true} path="/about" component={()=>this.state.isLoading===false&&<AboutPage adminData={this.state.data} />} />
                         <Route exact={true} path="/skills" component={()=>this.state.isLoading===false&&<Skills skillData={this.state.data2} />} />
                         <Route exact={true} path="/services" component={()=>this.state.isLoading===false&&<Services serviceData={this.state.data3} />} />
                         <Route exact={true} path="/portfolios" component={()=>this.state.isLoading===false&&<Portfolio portfolioData={this.state.data6} />} />
                         <Route exact={true} path="/reviews" component={()=>this.state.isLoading===false&&<ReviewPage reviewData={this.state.data4} />} />
                         <Route exact={true} path="/contact" component={()=>this.state.isLoading===false&&<GetIntoTouch adminData={this.state.data} />} />
+                        <Route path="" component={()=>this.state.isLoading===false&&<ErrorPage />} />
                     </Switch>
                     <Footer />
                 </Router>
