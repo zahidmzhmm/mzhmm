@@ -11,7 +11,7 @@ if (isset($_COOKIE["admin"])){
     <div class="col-md-3 col-xs-12">
         <div class="box-content bordered primary margin-bottom-20">
             <div class="profile-avatar">
-                <img src="../uploads/<?php echo $admin_only["img"]; ?>" alt="">
+                <img src="uploads/<?php echo $admin_only["img"]; ?>" alt="">
                 <h3 class="text-center"><strong><?php echo ucfirst($admin_only["name"]); ?></strong></h3>
                 <p class="text-center"><?php echo ucfirst($admin_only["title"]); ?></p>
                 <ul class="contact-social text-center list-inline">

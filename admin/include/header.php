@@ -33,7 +33,7 @@ $php_self_end = end($explode_php_selft);
 		<a href="index.php" class="logo">Zahid Mzhmm</a>
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 		<div class="user">
-			<a href="profile.php" class="avatar"><img src="../uploads/<?php echo $admin_only["img"]; ?>" alt="Image"><span class="status online"></span></a>
+			<a href="profile.php" class="avatar"><img src="uploads/<?php echo $admin_only["img"]; ?>" alt="Image"><span class="status online"></span></a>
 			<h5 class="name"><a href="profile.php"><?php echo $admin_only["name"];; ?></a></h5>
 			<h5 class="position">Administrator</h5>
 		</div>
