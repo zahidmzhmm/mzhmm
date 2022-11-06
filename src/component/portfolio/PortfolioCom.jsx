@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import classes from "./Portfolio.module.css";
-import {Link} from "react-router-dom";
 import {AssetsDir} from "../../server/Config";
 import {Modal} from "react-bootstrap";
 
@@ -10,16 +9,15 @@ const PortfolioCom = ({portfolio}) => {
     const handleShow = () => setShow(true);
     return (
         <>
-            <div className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
+            <div style={{border: '1px solid #ddd', padding: '2px'}}
+                 className={`${classes.portfolioColumn} col-md-6 col-lg-4 p-1 col-xs-12`}>
                 <div>
-                    <Link
-                        onClick={handleShow}
-                        className={classes.portfolioColumnA}
-                        title={portfolio.name}
-                        description={portfolio.description}
-                        to="/">
-                        <img src={`${AssetsDir}/portfolio/${portfolio.file}`} />
-                    </Link>
+                    <a onClick={handleShow} style={{cursor: 'pointer'}}
+                       className={classes.portfolioColumnA}
+                       title={portfolio.name}
+                       description={portfolio.description}>
+                        <img src={`${AssetsDir}/portfolio/${portfolio.file}`}/>
+                    </a>
                 </div>
             </div>
             <Modal show={show} onHide={handleClose} size="lg">
@@ -27,7 +25,7 @@ const PortfolioCom = ({portfolio}) => {
                     <Modal.Title>{portfolio.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <img style={{width:'100%'}} src={`${AssetsDir}/portfolio/${portfolio.file}`} alt=""/>
+                    <img style={{width: '100%'}} src={`${AssetsDir}/portfolio/${portfolio.file}`} alt=""/>
                     <div className="mt-2">
                         {portfolio.description}
                     </div>
